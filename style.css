@@ -1,0 +1,35 @@
+.dropdown-button {
+    cursor: default;
+    display: inline-block;
+    padding: 10px;
+    background-color: #EEE;
+    width: 100%;
+    text-align: center;
+}
+
+.dropdown-button .glyphicon {
+    float: right;
+
+}
+
+.dropdown-menu {
+    width: 100%;
+    box-shadow: none;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+    padding: 0;
+    max-height: 200px;
+    overflow: auto;
+}
+
+.dropdown-menu li a {
+    padding: 12px;
+}
+
+.submit {
+    background-color: #EEE;
+    width: 100%;
+    padding: 10px;
+
+}
