@@ -43,8 +43,9 @@
     overflow-y: auto;
 }
 
-#map, #pano {
+.map, .pano {
     float: left;
     width:50%;
     height:480px;
 }
+
