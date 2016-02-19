@@ -5,4 +5,10 @@ $(document).ready(function() {
         $('#desinationMenu .dropdown-button-text').text(value);
     });
 
+    //click handler for the interests dropdown menu
+    $('#interest-dropdown.dropdown').on('click', '.dropdown-menu li a', function() {
+        var value = $(this).text();
+        $('#interestMenu .dropdown-button-text').text(value);
+    });
+
 });
