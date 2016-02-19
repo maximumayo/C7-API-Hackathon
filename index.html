@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
           crossorigin="anonymous">
@@ -12,6 +13,7 @@
             integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A=="
             crossorigin="anonymous"></script>
     <script src="click.js"></script>
+    <script src="maps.js"></script>
     <script src="script.js"></script>
     <script src="objects.js"></script>
 </head>
@@ -56,7 +58,8 @@
         </div>
         <!-- Button -->
         <div class="col-md-4">
-            <button class="submit" data-toggle="modal" data-target="#interestModal">Go</button>
+            <button class="submit" data-toggle="modal" data-target="interestModal">Go</button> <!--Removed # from
+            data-target for maps to load correctly on the shown modal-->
         </div>
     </div>
 </div>
@@ -84,7 +87,8 @@
                     <div class="tab-content">
                         <div class="tab-pane active" id="tab1">
                             <div class='page-header header'>Top1</div>
-                            <div class='map'>Google Map</div>
+                            <div id="map"></div>
+                            <div id="pano"></div>
                             <div class='photo'></div>
 
                             <p>Cras pellentesque urna a leo egestas, at ullamcorper augue suscipit. Nulla id lacinia magna, non iaculis est. Praesent a placerat augue, eget eleifend purus. Aenean dignissim, orci et rutrum facilisis, tellus massa porta nulla, quis hendrerit dui ipsum vitae urna. In mattis lectus dolor, id venenatis lectus pellentesque at. Suspendisse posuere metus vel bibendum dignissim. Fusce interdum magna id libero scelerisque suscipit. Duis orci augue, rhoncus eget pharetra ac, viverra nec magna. In accumsan nulla ac suscipit pellentesque. Nulla iaculis luctus tellus, at ultricies urna hendrerit a. Aenean vehicula sodales varius. Duis sodales hendrerit odio non sagittis.</p>
