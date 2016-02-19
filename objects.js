@@ -15,11 +15,11 @@ var state = function (name) {
  * location: the google maps coordinates
  * photos: an array of photo urls
  */
-var attraction = function (name, location, photos, description) {
+var attraction = function (name, location, photos) {
     this.name = name;
     this.location = location;
     this.photos = photos;
-    this.description = description;
+
 
     //this adds the name of the attraction to the modal
     this.postName = function () {
@@ -60,7 +60,7 @@ var attraction = function (name, location, photos, description) {
                     var server = global_result.photos.photo[i].server;
                     var url = ('https://farm' + farm + '.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
                     attractionImg = $('<img>').attr('src', url);
-                    $(".photo").append(attractionImg);
+                    $("#photoCulture1").append(attractionImg);
                 }
             }
         });
@@ -69,27 +69,6 @@ var attraction = function (name, location, photos, description) {
     };
 };
 
-
-this.postDescription = function (){
-    $.ajax({
-        datatype: 'json',
-        method: "get",
-        url: '"http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=' + this.name +"&callback=?",
-        success: function (result) {
-            console.log('ajax was a success' + result);
-
-             var markup = result.parse.text['*'];
-
-
-
-
-                var descriptionDiv = $('<div>').html(markup);
-                $(".photo").append(markup);
-            }
-
-    });
-
-    console.log("I posted a photo woohoo");
 
 
 //creating CALIFORNIA state object
@@ -101,6 +80,13 @@ var huntGarden = new attraction("Huntington Library & Garden");
 var getty = new attraction("The Getty Center");
 var railroad = new attraction("California State Railroad Museum");
 var artWalk = new attraction("Downtown LA art walk");
+
+//creating CA Culture Wiki Search Terms
+var griffithwiki = new wikiDesc('Griffith_Observatory');
+var huntwiki = new wikiDesc('Huntington_Library');
+var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
+var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
+var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
 
 //adding the CA CULTURE attraction objects to the state object
 california.culture.top1 = griffith;
@@ -116,6 +102,10 @@ var seaWorld = new attraction("Sea World");
 var bayAqua = new attraction("Monterey Bay Aquarium");
 var legoLand = new attraction("Lego Land");
 
+
+
+
+
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.entertainment.top1 = diegoZoo;
 california.entertainment.top2 = disney;
@@ -125,7 +115,7 @@ california.entertainment.top5 = legoLand;
 
 //creating CA LANDMARKS attraction object
 var goldenGate = new attraction("Golden Gate Bridge");
-var hollywood = new attraction("Hollywood");
+var hollywood = new attraction("hollywood");
 var alcatraz = new attraction("Alcatraz");
 var santaPier = new attraction("Santa Monica Pier");
 var ussMidway = new attraction("USS Midway Museum");
