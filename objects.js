@@ -27,19 +27,42 @@ var attraction = function (name, location, photos) {
 
     //this will be the function that adds maps to a page
     this.postMap = function () {
-        console.log("I posted the map woohoo");
-        var mapProp = {
-            center: this.location, //CA coordinate
-            zoom: 5,
-            mapTypeId: google.maps.MapTypeId.ROADMAP //Type of map from Google
-        };
-
-        var map = new google.maps.Map(document.getElementById("map"), mapProp); //Applying google map to id map div
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: this.location,
+            zoom: 14
+        });
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
+                position: this.location,
+                pov: {
+                    heading: 34,
+                    pitch: 10
+                }
+            });
+        map.setStreetView(panorama);
     };
 
     //this will be the function that adds photos to a page
 
-    this.postPhotos = function (){//this function will loop through photo array and append them to modal
+    this.postPhotos = function (){
+        $.ajax({
+            datatype: 'json',
+            method: "get",
+            url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=3&sort=relevance&text='+ this.name,
+            success: function (result) {
+                console.log('ajax was a success' + result);
+
+                global_result = result;
+                for (var i = 0; i < global_result.photos.photo.length; i++) {
+                    var farm = global_result.photos.photo[i].farm;
+                    var id = global_result.photos.photo[i].id;
+                    var secret = global_result.photos.photo[i].secret;
+                    var server = global_result.photos.photo[i].server;
+                    var url = ('https://farm' + farm + '.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
+                    attractionImg = $('<img>').attr('src', url);
+                    $(".photo").append(attractionImg);
+                }
+            }
+        });
 
         console.log("I posted a photo woohoo");
     };
@@ -64,7 +87,7 @@ california.culture.top5 = artWalk;
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo");
-var disney = new attraction("Disneyland/California Adventure");
+var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
 var seaWorld = new attraction("Sea World");
 var bayAqua = new attraction("Monterey Bay Aquarium");
 var legoLand = new attraction("Lego Land");
@@ -162,6 +185,65 @@ newYork.nature.top2 = niagara;
 newYork.nature.top3 = lakeErie;
 newYork.nature.top4 = letchPark;
 newYork.nature.top5 = jonesBeach;
+
+//creating FLORIDA state object
+var florida = new state("Florida");
+
+//creating FL CULTURE attraction object
+var castilloMarc = new attraction("Castillo de San Marcos");
+var dali = new attraction("Salvador Dali Museum");
+var navalMuse = new attraction("National Naval Aviation Museum");
+var spaceCent = new attraction("Kennedy Space Center");
+var wonderWork = new attraction("Wonderworks");
+
+//adding the FL CULTURE attraction objects to the state object
+florida.culture.top1 = castilloMarc;
+florida.culture.top2 = dali;
+florida.culture.top3 = navalMuse;
+florida.culture.top4 = spaceCent;
+florida.culture.top5 = wonderWork;
+
+//creating FL ENTERTAINMENT attraction object
+var disneyWorld = new attraction("Walt Disney World");
+var buschGard = new attraction("Busch Gardens Tampa");
+var univStudio = new attraction("Universal Studios");
+var disCove = new attraction("Discovery Cove");
+var epcot = new attraction("Epcot");
+
+//adding the FL ENTERTAINMENT attraction objects to the state object
+florida.entertainment.top1 = disneyWorld;
+florida.entertainment.top2 = buschGard;
+florida.entertainment.top3 = univStudio;
+florida.entertainment.top4 = disCove;
+florida.entertainment.top5 = epcot;
+
+//creating FL LANDMARKS attraction object
+var overHigh = new attraction("Overseas Highway");
+var keyWest = new attraction("Key West");
+var bokTower = new attraction("Bok Tower Gardens");
+var bridgeLion = new attraction("Bridge of Lions");
+var plazaFerd = new attraction("Plaza Ferdinand VII");
+
+//adding the FL LANDMARKS attraction objects to the state object
+florida.landmarks.top1 = overHigh;
+florida.landmarks.top2 = keyWest;
+florida.landmarks.top3 = bokTower;
+florida.landmarks.top4 = bridgeLion;
+florida.landmarks.top5 = plazaFerd;
+
+//creating FL NATURE attraction object
+var everGlade = new attraction("EverGlades");
+var dryTort = new attraction("Dry Tortugas");
+var aerialAdv = new attraction("Aerial Adventure Park");
+var flCavern = new attraction("Florida Caverns State Park");
+var fallWater = new attraction("Falling Waters State Park");
+
+//adding the FL NATURE attraction objects to the state object
+florida.nature.top1 = everGlade;
+florida.nature.top2 = dryTort;
+florida.nature.top3 = aerialAdv;
+florida.nature.top4 = flCavern;
+florida.nature.top5 = fallWater;
 
 /*
  This is what a state object would look like:
