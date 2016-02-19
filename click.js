@@ -10,10 +10,6 @@ $(document).ready(function () {
         var value = $(this).text();
         $('#interestMenu .dropdown-button-text').text(value);
     });
-    /*$('#interestModal').on('loaded.modal-content',function(e){
-     console.log('call modal');
-     setTimeOut(initCA(),500);
-     });*/
     $('.submit').on('click', function () {
         $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
             initializeMap();
