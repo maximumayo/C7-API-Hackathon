@@ -19,6 +19,12 @@ $(document).ready(function() {
             var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
             console.log(url);
 
+            var img = $('<img>').attr('src', url);
+            $("body").append(img);
+
+
+
+
         }
     });
 
