@@ -6,7 +6,7 @@ $(document).ready(function() {
     $.ajax({
         datatype: 'json',
         method: "get",
-        url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&text=newyork',
+        url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=500&user_id=gregwest98&text=yosemite&id=3568189163',
 
         success: function (result) {
             console.log('ajax was a success' + result);
