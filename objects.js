@@ -248,6 +248,8 @@ florida.interests.nature.top3 = aerialAdv;
 florida.interests.nature.top4 = flCavern;
 florida.interests.nature.top5 = fallWater;
 
+var everGladewiki =
+
 /*
  This is what a state object would look like:
 
