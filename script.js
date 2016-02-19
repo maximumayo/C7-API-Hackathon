@@ -114,4 +114,22 @@ $(document).ready(function() {
             $("body").append(tahoe);
         }
     });
+<<<<<<< HEAD
 });
+=======
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 2d684d91e46b8c4fcba543b0dcf99911ac114987
