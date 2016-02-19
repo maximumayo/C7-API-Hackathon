@@ -66,6 +66,22 @@ var attraction = function (name, location, photos) {
 
         console.log("I posted a photo woohoo");
     };
+    this.postDescription = function () {
+        $.ajax({
+            type: "GET",
+            url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=legoland&callback=?",
+            //contentType: "application/json; charset=utf-8",
+            //async: false,
+            dataType: "json",
+            success: function (result) {
+                console.log('ajax was a success' + result);
+                var text = result.parse.text["*"];
+                var blurb = $('<div></div>').html(text);
+                blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
+                $('#photoCulture1').html($(blurb).find('p:first')); //Add 1st paragraph to the html
+            }
+        });
+    };
 };
 
 //creating CALIFORNIA state object
@@ -85,6 +101,13 @@ california.culture.top3 = getty;
 california.culture.top4 = railroad;
 california.culture.top5 = artWalk;
 
+//creating CA CULTURE Wiki Search Terms
+var griffithwiki = new wikiDesc('Griffith_Observatory');
+var huntwiki = new wikiDesc('Huntington_Library');
+var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
+var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
+var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
+
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo");
 var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
@@ -99,6 +122,13 @@ california.entertainment.top3 = seaWorld;
 california.entertainment.top4 = bayAqua;
 california.entertainment.top5 = legoLand;
 
+//creating CA ENTERTAINMENT Wiki Search Terms
+var diegoZooWiki = new wikiDesc("San_Diego_Zoo");
+var disneyWiki = new wikiDesc("Disneyland");
+var seaWorldWiki = new wikiDesc("SeaWorld");
+var bayAquaWiki = new wikiDesc("Monterey_Bay_Aquarium");
+var legoLandWiki = new wikiDesc("Legoland");
+
 //creating CA LANDMARKS attraction object
 var goldenGate = new attraction("Golden Gate Bridge");
 var hollywood = new attraction("Hollywood");
@@ -112,6 +142,8 @@ california.landmarks.top2 = hollywood;
 california.landmarks.top3 = alcatraz;
 california.landmarks.top4 = santaPier;
 california.landmarks.top5 = ussMidway;
+
+//creating CA LANDMARKS Wiki Search Terms
 
 //creating CA NATURE attraction object
 var yosemite = new attraction("Yosemite National Park");
