@@ -17,7 +17,7 @@ $(document).ready(function () {
             console.log('prevented');
         }
 
-        var stateName = $('#desinationMenu .dropdown-button-text').text();
+        var stateName = $('#destinationMenu .dropdown-button-text').text();
         var interestName = $('#interestMenu .dropdown-button-text').text();
 
         //changes the title of the modal to the state that was selected
@@ -74,5 +74,3 @@ function showInterestContent(state) {
     }
 
 }
-
-});
