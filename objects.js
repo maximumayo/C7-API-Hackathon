@@ -18,13 +18,14 @@ var state = function (name) {
  * location: the google maps coordinates
  * photos: an array of photo urls
  */
-var attraction = function (name, location) {
+var attraction = function (name, location, url) {
     this.name = name;
     this.location = location;
+    this.url = url;
 
     //this adds the name of the attraction to the modal
     this.postName = function (interest, index) {
-        $('.title' + interest + index).text(this.name);
+        $('.title' + interest + index).html('<a href="' + this.url + '">' + this.name + '</a>');
     };
 
     //this will be the function that adds maps to a page
@@ -92,7 +93,7 @@ var attraction = function (name, location) {
 var california = new state("California");
 
 //creating CA CULTURE attraction object
-var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004});
+var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/");
 var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100});
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751});
 var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044});
@@ -279,6 +280,13 @@ florida.interests.culture.top3 = navalMuse;
 florida.interests.culture.top4 = spaceCent;
 florida.interests.culture.top5 = wonderWork;
 
+//creating FL culture Wiki Search Terms
+//var castilloMarcWiki = new wikiDesc('Castillo_de_San_Marcos');
+//var daliWiki = new wikiDesc('Salvador_Dalí_Museum');
+//var navalMuseWiki = new wikiDesc('National_Naval_Aviation_Museum');
+//var spaceCentWiki = new wikiDesc('Kennedy_Space_Center');
+//var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
+
 //creating FL ENTERTAINMENT attraction object
 var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811});
 var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216});
@@ -292,6 +300,13 @@ florida.interests.entertainment.top2 = buschGard;
 florida.interests.entertainment.top3 = univStudio;
 florida.interests.entertainment.top4 = disCove;
 florida.interests.entertainment.top5 = epcot;
+
+//creating FL ENTERTAINMENT Wiki Search Terms
+//var disneyWorldWiki = new wikiDesc('Walt_Disney_World');
+//var buschGardWiki = new wikiDesc('Busch_Gardens_Tampa');
+//var univStudioWiki = new wikiDesc('Universal_Parks_%26_Resorts');
+//var disCoveWiki = new wikiDesc('Discovery_Cove');
+//var epcotWiki = new wikiDesc('Epcot');
 
 //creating FL LANDMARKS attraction object
 var overHigh = new attraction("Overseas Highway", {lat: 24.7836, lng: -80.9033});
@@ -307,6 +322,13 @@ florida.interests.landmarks.top3 = bokTower;
 florida.interests.landmarks.top4 = bridgeLion;
 florida.interests.landmarks.top5 = plazaFerd;
 
+//creating FL LANDMARKS Wiki Search Terms
+//var overHighWiki = new wikiDesc('Overseas_Highway');
+//var keyWestWiki = new wikiDesc('Key_West,_Florida');
+//var bokTowerWiki = new wikiDesc('Bok_Tower_Gardens');
+//var bridgeLionWiki = new wikiDesc('Bridge_of_Lions');
+//var plazaFredWiki = new wikiDesc('Plaza_Ferdinand_VII');
+
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333});
 var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733});
@@ -320,6 +342,13 @@ florida.interests.nature.top2 = dryTort;
 florida.interests.nature.top3 = aerialAdv;
 florida.interests.nature.top4 = flCavern;
 florida.interests.nature.top5 = fallWater;
+
+//creating FL NATURE Wiki Search Terms
+//var everGladeWiki = new wikiDesc('Everglades_National_Park');
+//var dryTortWiki = new wikiDesc('Dry_Tortugas_National_Park');
+//var aerialAdvWiki = new wikiDesc('Adventure_park');
+//var flCavernWiki = new wikiDesc('Florida_Caverns_State_Park');
+//var fallWaterWiki = new wikiDesc('Falling_Waters_State_Park');
 
 /*
  This is what a state object would look like:
