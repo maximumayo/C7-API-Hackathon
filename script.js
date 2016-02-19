@@ -6,6 +6,9 @@ var sequoia;
 var caNatureArray = [yosemite, joshuatree, tahoe, redwood, sequoia];
 
 
+var griffith;
+
+
 //Yosemite image
 $(document).ready(function() {
     $.ajax({
@@ -116,6 +119,79 @@ $(document).ready(function() {
         }
     });
 });
+
+
+//Griffith Observatory Image
+$(document).ready(function() {
+    $.ajax({
+        datatype: 'json',
+        method: "get",
+        url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=500&user_id=40928097@N07&tag_mode=all&tags=Griffith Observatory',
+        success: function (result) {
+            console.log('ajax was a success' + result);
+
+            global_result = result;
+
+            var farm = global_result.photos.photo[0].farm;
+            var id = global_result.photos.photo[0].id;
+            var secret = global_result.photos.photo[0].secret;
+            var server = global_result.photos.photo[0].server;
+            var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
+            griffith = $('<img>').attr('src', url);
+            $("body").append(griffith);
+        }
+    });
+});
+
+//Huntington Library Image
+$(document).ready(function() {
+    $.ajax({
+        datatype: 'json',
+        method: "get",
+        url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=500&user_id=35973104@N05&tag_mode=all&tags=Huntington Gardens',
+        success: function (result) {
+            console.log('ajax was a success' + result);
+
+            global_result = result;
+
+            var farm = global_result.photos.photo[5].farm;
+            var id = global_result.photos.photo[5].id;
+            var secret = global_result.photos.photo[5].secret;
+            var server = global_result.photos.photo[5].server;
+            var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
+            huntington = $('<img>').attr('src', url);
+            $("body").append(huntington);
+        }
+    });
+});
+
+//Getty Center Image
+$(document).ready(function() {
+    $.ajax({
+        datatype: 'json',
+        method: "get",
+        url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=500&user_id=35973104@N05&tag_mode=all&tags=Huntington Gardens',
+        success: function (result) {
+            console.log('ajax was a success' + result);
+
+            global_result = result;
+
+            var farm = global_result.photos.photo[5].farm;
+            var id = global_result.photos.photo[5].id;
+            var secret = global_result.photos.photo[5].secret;
+            var server = global_result.photos.photo[5].server;
+            var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
+            huntington = $('<img>').attr('src', url);
+            $("body").append(huntington);
+        }
+    });
+});
+
+
+
+
+
+
 
 
 
