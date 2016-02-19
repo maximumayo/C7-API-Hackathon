@@ -144,6 +144,11 @@ california.landmarks.top4 = santaPier;
 california.landmarks.top5 = ussMidway;
 
 //creating CA LANDMARKS Wiki Search Terms
+var goldenGateWiki = new wikiDesc("Golden_Gate_Bridge");
+var hollywoodWiki = new wikiDesc("Hollywood");
+var alcatrazWiki = new wikiDesc("Alcatraz_Island");
+var santaPierWiki = new wikiDesc("Santa_Monica_Pier");
+var ussMidwayWiki = new wikiDesc("USS_Midway_Museum");
 
 //creating CA NATURE attraction object
 var yosemite = new attraction("Yosemite National Park", {lat: 37.8499, lng: -119.5677});
@@ -158,6 +163,13 @@ california.nature.top2 = joshuaTree;
 california.nature.top3 = redWood;
 california.nature.top4 = sequoiaKings;
 california.nature.top5 = lakeTahoe;
+
+//creating CA NATURE Wiki Search Terms
+var yosemiteWiki = new wikiDesc("Yosemite_National_Park");
+var joshuaTreeWiki = new wikiDesc("Joshua_Tree_National_Park");
+var redWoodWiki = new wikiDesc("Redwood_National_and_State_Parks");
+var sequioaKingsWiki = new wikiDesc("Sequoia_and_Kings_Canyon_National_Parks");
+var lakeTahoeWiki = new wikiDesc("Lake_Tahoe");
 
 //creating NEW YORK state object
 var newYork = new state("New York");
@@ -175,6 +187,8 @@ newYork.culture.top2 = septElev;
 newYork.culture.top3 = ellis;
 newYork.culture.top4 = publicLib;
 newYork.culture.top5 = guggen;
+
+//creating NY CULTURE Wiki Search Terms
 
 //creating NY ENTERTAINMENT attraction object
 var broadWay = new attraction("Broadway");
