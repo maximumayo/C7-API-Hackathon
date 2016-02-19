@@ -15,10 +15,11 @@ var state = function (name) {
  * location: the google maps coordinates
  * photos: an array of photo urls
  */
-var attraction = function (name, location, photos) {
+var attraction = function (name, location, photos, description) {
     this.name = name;
     this.location = location;
     this.photos = photos;
+    this.description = description;
 
     //this adds the name of the attraction to the modal
     this.postName = function () {
@@ -68,6 +69,29 @@ var attraction = function (name, location, photos) {
         console.log("I posted a photo woohoo");
     };
 };
+
+
+this.postDescription = function (){
+    $.ajax({
+        datatype: 'json',
+        method: "get",
+        url: '"http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=' + this.name +"&callback=?",
+        success: function (result) {
+            console.log('ajax was a success' + result);
+
+             var markup = result.parse.text['*'];
+
+
+
+
+                var descriptionDiv = $('<div>').html(markup);
+                $(".photo").append(markup);
+            }
+
+    });
+
+    console.log("I posted a photo woohoo");
+
 
 //creating CALIFORNIA state object
 var california = new state("California");
@@ -414,5 +438,7 @@ California Culture
  https://www.floridastateparks.org/park/Falling-Waters
 
 */
+
+
 
 
