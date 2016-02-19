@@ -31,7 +31,9 @@ var attraction = function (name, location, photos) {
     };
 
     //this will be the function that adds photos to a page
-    this.postPhotos = function () {
+
+    this.postPhotos = function (){//this function will loop through photo array and append them to modal
+
         console.log("I posted a photo woohoo");
     };
 };
