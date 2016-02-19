@@ -15,8 +15,8 @@ function doSlideshow(){
     }
     $('body')
         .css('background-image','url("'+images[nextimage++]+'")')
-        .fadeIn(2000, function(){
-            setTimeout(doSlideshow,4000)
+        .fadeIn(5000, function(){
+            setTimeout(doSlideshow,10000)
         });
 
 }
