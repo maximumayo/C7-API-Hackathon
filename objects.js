@@ -147,9 +147,9 @@ newYork.culture.top5 = guggen;
 //creating NY ENTERTAINMENT attraction object
 var broadWay = new attraction("Broadway");
 var tonightShow = new attraction("The Tonight Show");
-var madGarden = new attraction("Madison Square Garden");
-var bronxZoo = new attraction("Bronx Zoo");
-var coneyIsl = new attraction("Coney Island");
+var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936});
+var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754});
+var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859});
 
 //adding the NY ENTERTAINMENT attraction objects to the state object
 newYork.entertainment.top1 = broadWay;
@@ -160,10 +160,10 @@ newYork.entertainment.top5 = coneyIsl;
 
 //creating NY LANDMARKS attraction object
 var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444});
-var empState = new attraction("Empire State Building", {lat: });
-var rockCenter = new attraction("Rockefeller Center");
-var timeSquare = new attraction("Times Square");
-var brookBridge = new attraction("Brooklyn Bridge");
+var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857});
+var rockCenter = new attraction("Rockefeller Center", {lat:40.7586, lng:-73.9792});
+var timeSquare = new attraction("Times Square", {lat: 40.7577, lng: -73.9857});
+var brookBridge = new attraction("Brooklyn Bridge", {lat:40.7057, lng: -73.9964});
 
 //adding the NY LANDMARKS attraction objects to the state object
 newYork.landmarks.top1 = liberty;
@@ -173,11 +173,11 @@ newYork.landmarks.top4 = timeSquare;
 newYork.landmarks.top5 = brookBridge;
 
 //creating NY NATURE attraction object
-var centPark = new attraction("Central Park");
-var niagara = new attraction("Niagara Falls");
-var lakeErie = new attraction("Lake Erie");
-var letchPark = new attraction("Letchworth State Park");
-var jonesBeach = new attraction("Jones Beach State Park");
+var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667});
+var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167});
+var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000});
+var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833});
+var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361});
 
 //adding the NY NATURE attraction objects to the state object
 newYork.nature.top1 = centPark;
@@ -190,11 +190,11 @@ newYork.nature.top5 = jonesBeach;
 var florida = new state("Florida");
 
 //creating FL CULTURE attraction object
-var castilloMarc = new attraction("Castillo de San Marcos");
-var dali = new attraction("Salvador Dali Museum");
-var navalMuse = new attraction("National Naval Aviation Museum");
-var spaceCent = new attraction("Kennedy Space Center");
-var wonderWork = new attraction("Wonderworks");
+var castilloMarc = new attraction("Castillo de San Marcos", {lat: 29.8978, lng: -81.3114});
+var dali = new attraction("Salvador Dali Museum", {lat: 27.7605833, lng: -82.6362096});
+var navalMuse = new attraction("National Naval Aviation Museum", {lat: 30.3496, lng: -87.3036});
+var spaceCent = new attraction("Kennedy Space Center", {lat: 28.5241, lng: -80.6508});
+var wonderWork = new attraction("Wonderworks", {lat: 28.4337, lng: -81.4717});
 
 //adding the FL CULTURE attraction objects to the state object
 florida.culture.top1 = castilloMarc;
