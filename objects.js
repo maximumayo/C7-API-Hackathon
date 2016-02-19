@@ -28,6 +28,13 @@ var attraction = function (name, location, photos) {
     //this will be the function that adds maps to a page
     this.postMap = function () {
         console.log("I posted the map woohoo");
+        var mapProp = {
+            center: this.location, //CA coordinate
+            zoom: 5,
+            mapTypeId: google.maps.MapTypeId.ROADMAP //Type of map from Google
+        };
+
+        var map = new google.maps.Map(document.getElementById("map"), mapProp); //Applying google map to id map div
     };
 
     //this will be the function that adds photos to a page
