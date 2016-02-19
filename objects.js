@@ -18,10 +18,11 @@ var state = function (name) {
  * location: the google maps coordinates
  * photos: an array of photo urls
  */
-var attraction = function (name, location, url) {
+var attraction = function (name, location, url, wiki) {
     this.name = name;
     this.location = location;
     this.url = url;
+    this.wiki = wiki;
 
     //this adds the name of the attraction to the modal
     this.postName = function (interest, index) {
@@ -76,7 +77,7 @@ var attraction = function (name, location, url) {
     this.postDescription = function () {
         $.ajax({
             type: "GET",
-            url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=legoland&callback=?",
+            url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + this.wiki + "&callback=?",
             dataType: "json",
             success: function (result) {
                 console.log('ajax was a success' + result);
@@ -93,7 +94,7 @@ var attraction = function (name, location, url) {
 var california = new state("California");
 
 //creating CA CULTURE attraction object
-var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/");
+var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/", 'Griffith_Observatory');
 var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100});
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751});
 var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044});
