@@ -145,7 +145,7 @@ newYork.culture.top4 = publicLib;
 newYork.culture.top5 = guggen;
 
 //creating NY ENTERTAINMENT attraction object
-var broadWay = new attraction("Broadway");
+var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835});
 var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790});
 var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936});
 var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754});
