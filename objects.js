@@ -153,11 +153,11 @@ california.interests.nature.top5 = lakeTahoe;
 var newYork = new state("New York");
 
 //creating NY CULTURE attraction object
-var metroArt = new attraction("The Metropolitan Museum of Art", {lat: 40.7789, lng: -73.9637});
-var septElev = new attraction("The National 9/11 Memorial & Museum", {lat: 40.7111, lng: -74.0146});
-var ellis = new attraction("Ellis Island", {lat: 40.6986, lng: -74.0400});
-var publicLib = new attraction("New York Public Library", {lat: 40.7527, lng: -73.9818});
-var guggen = new attraction("Guggenheim", {lat: 40.782879, lng: -73.959027});
+var metroArt = new attraction("The Metropolitan Museum of Art", {lat: 40.7789, lng: -73.9637},'http://www.metmuseum.org/');
+var septElev = new attraction("The National 9/11 Memorial & Museum", {lat: 40.7111, lng: -74.0146}, 'http://www.911memorial.org/');
+var ellis = new attraction("Ellis Island", {lat: 40.6986, lng: -74.0400},  'http://www.libertyellisfoundation.org/');
+var publicLib = new attraction("New York Public Library", {lat: 40.7527, lng: -73.9818}, 'http://www.nypl.org/' );
+var guggen = new attraction("Guggenheim", {lat: 40.782879, lng: -73.959027},  'http://www.guggenheim.org/');
 
 //adding the NY CULTURE attraction objects to the state object
 newYork.interests.culture.top1 = metroArt;
@@ -167,11 +167,11 @@ newYork.interests.culture.top4 = publicLib;
 newYork.interests.culture.top5 = guggen;
 
 //creating NY ENTERTAINMENT attraction object
-var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835});
-var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790});
-var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936});
-var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754});
-var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859});
+var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835}, 'http://www.broadway.com/');
+var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790}, 'http://www.nbc.com/the-tonight-show');
+var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936}, 'http://www.thegarden.com/');
+var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754}, 'http://bronxzoo.com/');
+var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859}, 'http://www.coneyisland.com/' );
 
 //adding the NY ENTERTAINMENT attraction objects to the state object
 newYork.interests.entertainment.top1 = broadWay;
