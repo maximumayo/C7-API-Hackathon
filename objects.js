@@ -203,6 +203,13 @@ florida.culture.top3 = navalMuse;
 florida.culture.top4 = spaceCent;
 florida.culture.top5 = wonderWork;
 
+//creating FL culture Wiki Search Terms
+//var castilloMarcWiki = new wikiDesc('Castillo_de_San_Marcos');
+//var daliWiki = new wikiDesc('Salvador_Dalí_Museum');
+//var navalMuseWiki = new wikiDesc('National_Naval_Aviation_Museum');
+//var spaceCentWiki = new wikiDesc('Kennedy_Space_Center');
+//var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
+
 //creating FL ENTERTAINMENT attraction object
 var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811});
 var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216});
@@ -216,6 +223,13 @@ florida.entertainment.top2 = buschGard;
 florida.entertainment.top3 = univStudio;
 florida.entertainment.top4 = disCove;
 florida.entertainment.top5 = epcot;
+
+//creating FL ENTERTAINMENT Wiki Search Terms
+//var disneyWorldWiki = new wikiDesc('Walt_Disney_World');
+//var buschGardWiki = new wikiDesc('Busch_Gardens_Tampa');
+//var univStudioWiki = new wikiDesc('Universal_Parks_%26_Resorts');
+//var disCoveWiki = new wikiDesc('Discovery_Cove');
+//var epcotWiki = new wikiDesc('Epcot');
 
 //creating FL LANDMARKS attraction object
 var overHigh = new attraction("Overseas Highway", {lat: 24.7836, lng: -80.9033});
@@ -231,6 +245,13 @@ florida.landmarks.top3 = bokTower;
 florida.landmarks.top4 = bridgeLion;
 florida.landmarks.top5 = plazaFerd;
 
+//creating FL LANDMARKS Wiki Search Terms
+//var overHighWiki = new wikiDesc('Overseas_Highway');
+//var keyWestWiki = new wikiDesc('Key_West,_Florida');
+//var bokTowerWiki = new wikiDesc('Bok_Tower_Gardens');
+//var bridgeLionWiki = new wikiDesc('Bridge_of_Lions');
+//var plazaFredWiki = new wikiDesc('Plaza_Ferdinand_VII');
+
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333});
 var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733});
@@ -245,7 +266,12 @@ florida.nature.top3 = aerialAdv;
 florida.nature.top4 = flCavern;
 florida.nature.top5 = fallWater;
 
-var everGladewiki =
+//creating FL NATURE Wiki Search Terms
+//var everGladeWiki = new wikiDesc('Everglades_National_Park');
+//var dryTortWiki = new wikiDesc('Dry_Tortugas_National_Park');
+//var aerialAdvWiki = new wikiDesc('Adventure_park');
+//var flCavernWiki = new wikiDesc('Florida_Caverns_State_Park');
+//var fallWaterWiki = new wikiDesc('Falling_Waters_State_Park');
 
 /*
  This is what a state object would look like:
