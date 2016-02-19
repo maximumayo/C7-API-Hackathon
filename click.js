@@ -12,7 +12,10 @@ $(document).ready(function () {
     });
 
     $('.submit').on('click', function () {
-<<<<<<< HEAD
+        if ($('#destinationMenu .dropdown-button-text').text() == "Select a Destination" || $('#interestMenu .dropdown-button-text').text() == "Select an Interest") {
+            return;
+            console.log('prevented');
+        }
 
         var stateName = $('#desinationMenu .dropdown-button-text').text();
         var interestName = $('#interestMenu .dropdown-button-text').text();
@@ -42,22 +45,9 @@ $(document).ready(function () {
 
         showInterestContent(stateObj);
 
-        //$('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
-        //    //disney.postMap();
-        //});
-=======
-        if ($('#destinationMenu .dropdown-button-text').text() == "Select a Destination" || $('#interestMenu .dropdown-button-text').text() == "Select an Interest") {
-            return;
-            console.log('prevented');
-        }
-        $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
-            disney.postMap();
-        });
->>>>>>> 15d74b214bf15cab2f9732886a2fe99ab3f83b27
         $('#interestModal').modal('show'); //shows modal
 
     });
-<<<<<<< HEAD
 });
 /*
 @function showInterestContent
@@ -84,7 +74,5 @@ function showInterestContent(state) {
     }
 
 }
-=======
 
 });
->>>>>>> 15d74b214bf15cab2f9732886a2fe99ab3f83b27
