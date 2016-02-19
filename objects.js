@@ -27,14 +27,19 @@ var attraction = function (name, location, photos) {
 
     //this will be the function that adds maps to a page
     this.postMap = function () {
-        console.log("I posted the map woohoo");
-        var mapProp = {
-            center: this.location, //CA coordinate
-            zoom: 5,
-            mapTypeId: google.maps.MapTypeId.ROADMAP //Type of map from Google
-        };
-
-        var map = new google.maps.Map(document.getElementById("map"), mapProp); //Applying google map to id map div
+        var map = new google.maps.Map(document.getElementById('map'), {
+            center: this.location,
+            zoom: 14
+        });
+        var panorama = new google.maps.StreetViewPanorama(
+            document.getElementById('pano'), {
+                position: this.location,
+                pov: {
+                    heading: 34,
+                    pitch: 10
+                }
+            });
+        map.setStreetView(panorama);
     };
 
     //this will be the function that adds photos to a page
@@ -64,7 +69,7 @@ california.culture.top5 = artWalk;
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo");
-var disney = new attraction("Disneyland/California Adventure");
+var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
 var seaWorld = new attraction("Sea World");
 var bayAqua = new attraction("Monterey Bay Aquarium");
 var legoLand = new attraction("Lego Land");
