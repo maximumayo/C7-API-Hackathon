@@ -25,20 +25,49 @@ $(document).ready(function () {
         $('#'+interestDiv).addClass('active'); //adds class active to the div that holds the interest's content
         $('a[href="#'+ interestDiv +'"]').parent().addClass('active'); //adds class active to the li of the interest's tab
 
-        //showInterestContent(stateName, interestName);
+        //convert destination dropdown value to a variable name
+        var stateObj;
+        switch(stateName) {
+            case 'California':
+                stateObj = california;
+                break;
+            case 'New York':
+                stateObj = newYork;
+                break;
+            case 'Florida':
+                stateObj = florida;
+                break;
+        }
 
-        $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
-            disney.postMap();
-        });
+        showInterestContent(stateObj);
+
+        //$('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
+        //    //disney.postMap();
+        //});
         $('#interestModal').modal('show'); //shows modal
     });
 });
-
+/*
+@function showInterestContent
+Loops through each interest in state, then loops through each attraction per interest, and displays the content for each attraction
+params:
+state: the state object variable name, taken from the value in the destination dropdown menu
+ */
 function showInterestContent(state) {
     for(var interest in state.interests) {
-        var interestName = interest.charAt(0).toUpperCase() + interest.slice(1);
-        for(var i = 1; i <= 5; i++) {
+
+        var interestName = interest.charAt(0).toUpperCase() + interest.slice(1); //capitalize the first letter of the interest var name
+        for(var i = 1; i <= 5; i++) { //loops through each attraction (top1, top2, etc.)
+
             state.interests[interest]['top'+i].postName(interestName, i);
+
+            $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
+                state.interests[interest]['top'+i].postMap();
+
+            });
+            state.interests[interest]['top'+i].postPhotos(interestName, i);
+
+
         }
     }
 

@@ -18,14 +18,12 @@ var state = function (name) {
  * location: the google maps coordinates
  * photos: an array of photo urls
  */
-var attraction = function (name, location, photos) {
+var attraction = function (name, location) {
     this.name = name;
     this.location = location;
-    this.photos = photos;
 
     //this adds the name of the attraction to the modal
     this.postName = function (interest, index) {
-        console.log(interest, index);
         $('.title' + interest + index).text(this.name);
     };
 
@@ -47,7 +45,8 @@ var attraction = function (name, location, photos) {
 
     //this will be the function that adds photos to a page
 
-    this.postPhotos = function (){
+    this.postPhotos = function (interest, index){
+        $("#photo"  + interest + index).html(""); //clears the photo divs
         $.ajax({
             datatype: 'json',
             method: "get",
@@ -63,7 +62,7 @@ var attraction = function (name, location, photos) {
                     var server = global_result.photos.photo[i].server;
                     var url = ('https://farm' + farm + '.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
                     attractionImg = $('<img>').attr('src', url);
-                    $(".photo").append(attractionImg);
+                    $("#photo"  + interest + index).append(attractionImg);
                 }
             }
         });
@@ -94,7 +93,7 @@ var diegoZoo = new attraction("San Diego Zoo");
 var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
 var seaWorld = new attraction("Sea World");
 var bayAqua = new attraction("Monterey Bay Aquarium");
-var legoLand = new attraction("Lego Land");
+var legoLand = new attraction("Legoland California");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
