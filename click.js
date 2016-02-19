@@ -10,5 +10,10 @@ $(document).ready(function () {
         var value = $(this).text();
         $('#interestMenu .dropdown-button-text').text(value);
     });
-
+    $('.submit').on('click', function () {
+        $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
+            initializeMap();
+        });
+        $('#interestModal').modal('show'); //shows modal
+    });
 });
