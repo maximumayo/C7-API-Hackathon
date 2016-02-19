@@ -120,19 +120,13 @@ california.interests.entertainment.top4 = bayAqua;
 california.interests.entertainment.top5 = legoLand;
 
 //creating CA LANDMARKS attraction object
-<<<<<<< HEAD
-var goldenGate = new attraction("Golden Gate Bridge");
-var hollywood = new attraction("hollywood");
-var alcatraz = new attraction("Alcatraz");
-var santaPier = new attraction("Santa Monica Pier");
-var ussMidway = new attraction("USS Midway Museum");
-=======
+
 var goldenGate = new attraction("Golden Gate Bridge", {lat: 37.8197, lng: -122.4786});
 var hollywood = new attraction("Hollywood", {lat: 34.1000, lng: -118.3333});
 var alcatraz = new attraction("Alcatraz", {lat: 37.8267, lng: -122.4233});
 var santaPier = new attraction("Santa Monica Pier", {lat:34.0086, lng: -118.4986});
 var ussMidway = new attraction("USS Midway Museum", {lat:32.7113762, lng: -117.175658});
->>>>>>> aefc2ae9132cca50135f6447a756d3160be37d3d
+
 
 //adding the CA LANDMARKS attraction objects to the state object
 california.interests.landmarks.top1 = goldenGate;
