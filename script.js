@@ -5,6 +5,7 @@
 //var sequoia;
 //var caNatureArray = [yosemite, joshuatree, tahoe, redwood, sequoia];
 
+
 //var griffith;
 //var huntington;
 //var getty;
@@ -13,9 +14,9 @@
 //var caCultureArray = [griffith, huntington, getty, railroad, artwalk];
 //var goldenGate;
 
+
 //Yosemite image
 //$(document).ready(function () {
-
 //    $.ajax({
 //        datatype: 'json',
 //        method: "get",
@@ -29,14 +30,14 @@
 //            var id = global_result.photos.photo[0].id;
 //            var secret = global_result.photos.photo[0].secret;
 //            var server = global_result.photos.photo[0].server;
-
 //            var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
-
+//            var url = ('https://farm' + farm +'.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
 //            yosemite = $('<img>').attr('src', url);
 //            $("body").append(yosemite);
 //        }
 //    });
 //});
+//
 
 ////Joshua Tree image
 //$(document).ready(function() {
@@ -259,4 +260,6 @@
 //            $("body").append(goldenGate);
 //        }
 //    });
+
 //});
+
