@@ -20,8 +20,6 @@ function initializeMap() {
     map.setStreetView(panorama);
 }
 
-
-
 //Regular Map function with no markers
 /*var myCenter=new google.maps.LatLng(36.778259,-119.417931); //CA latitude
  function initialize() {
