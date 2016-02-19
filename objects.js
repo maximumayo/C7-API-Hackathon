@@ -8,7 +8,7 @@ var state = function (name) {
         'culture': {},
         'entertainment': {},
         'landmarks': {},
-        'nature': {}
+        'nature': {},
     }
 
 };
@@ -69,12 +69,13 @@ var attraction = function (name, location) {
 
         console.log("I posted a photo woohoo");
     };
+
+    //this will be the function to add description to the page
+
     this.postDescription = function () {
         $.ajax({
             type: "GET",
             url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=legoland&callback=?",
-            //contentType: "application/json; charset=utf-8",
-            //async: false,
             dataType: "json",
             success: function (result) {
                 console.log('ajax was a success' + result);
@@ -105,11 +106,11 @@ california.interests.culture.top4 = railroad;
 california.interests.culture.top5 = artWalk;
 
 //creating CA CULTURE Wiki Search Terms
-var griffithwiki = new wikiDesc('Griffith_Observatory');
-var huntwiki = new wikiDesc('Huntington_Library');
-var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
-var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
-var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
+//var griffithwiki = new wikiDesc('Griffith_Observatory');
+//var huntwiki = new wikiDesc('Huntington_Library');
+//var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
+//var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
+//var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658});
@@ -126,11 +127,11 @@ california.interests.entertainment.top4 = bayAqua;
 california.interests.entertainment.top5 = legoLand;
 
 //creating CA ENTERTAINMENT Wiki Search Terms
-var diegoZooWiki = new wikiDesc("San_Diego_Zoo");
-var disneyWiki = new wikiDesc("Disneyland");
-var seaWorldWiki = new wikiDesc("SeaWorld");
-var bayAquaWiki = new wikiDesc("Monterey_Bay_Aquarium");
-var legoLandWiki = new wikiDesc("Legoland");
+//var diegoZooWiki = new wikiDesc("San_Diego_Zoo");
+//var disneyWiki = new wikiDesc("Disneyland");
+//var seaWorldWiki = new wikiDesc("SeaWorld");
+//var bayAquaWiki = new wikiDesc("Monterey_Bay_Aquarium");
+//var legoLandWiki = new wikiDesc("Legoland");
 
 //creating CA LANDMARKS attraction object
 var goldenGate = new attraction("Golden Gate Bridge", {lat: 37.8197, lng: -122.4786});
@@ -147,11 +148,11 @@ california.interests.landmarks.top4 = santaPier;
 california.interests.landmarks.top5 = ussMidway;
 
 //creating CA LANDMARKS Wiki Search Terms
-var goldenGateWiki = new wikiDesc("Golden_Gate_Bridge");
-var hollywoodWiki = new wikiDesc("Hollywood");
-var alcatrazWiki = new wikiDesc("Alcatraz_Island");
-var santaPierWiki = new wikiDesc("Santa_Monica_Pier");
-var ussMidwayWiki = new wikiDesc("USS_Midway_Museum");
+//var goldenGateWiki = new wikiDesc("Golden_Gate_Bridge");
+//var hollywoodWiki = new wikiDesc("Hollywood");
+//var alcatrazWiki = new wikiDesc("Alcatraz_Island");
+//var santaPierWiki = new wikiDesc("Santa_Monica_Pier");
+//var ussMidwayWiki = new wikiDesc("USS_Midway_Museum");
 
 //creating CA NATURE attraction object
 var yosemite = new attraction("Yosemite National Park", {lat: 37.8499, lng: -119.5677});
@@ -168,11 +169,11 @@ california.interests.nature.top4 = sequoiaKings;
 california.interests.nature.top5 = lakeTahoe;
 
 //creating CA NATURE Wiki Search Terms
-var yosemiteWiki = new wikiDesc("Yosemite_National_Park");
-var joshuaTreeWiki = new wikiDesc("Joshua_Tree_National_Park");
-var redWoodWiki = new wikiDesc("Redwood_National_and_State_Parks");
-var sequioaKingsWiki = new wikiDesc("Sequoia_and_Kings_Canyon_National_Parks");
-var lakeTahoeWiki = new wikiDesc("Lake_Tahoe");
+//var yosemiteWiki = new wikiDesc("Yosemite_National_Park");
+//var joshuaTreeWiki = new wikiDesc("Joshua_Tree_National_Park");
+//var redWoodWiki = new wikiDesc("Redwood_National_and_State_Parks");
+//var sequioaKingsWiki = new wikiDesc("Sequoia_and_Kings_Canyon_National_Parks");
+//var lakeTahoeWiki = new wikiDesc("Lake_Tahoe");
 
 //creating NEW YORK state object
 var newYork = new state("New York");
@@ -192,6 +193,11 @@ newYork.interests.culture.top4 = publicLib;
 newYork.interests.culture.top5 = guggen;
 
 //creating NY CULTURE Wiki Search Terms
+//var metroArtWiki = new wikiDesc("Metropolitan_Museum_of_Art");
+//var septElevWiki = new wikiDesc("National_September_11_Memorial_%26_Museum");
+//var ellilsWiki = new wikiDesc("Ellis_Island");
+//var publicLibWiki = new wikiDesc("New_York_Public_Library");
+//var guggenWiki = new wikiDesc("Solomon_R._Guggenheim_Museum");
 
 //creating NY ENTERTAINMENT attraction object
 var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835});
@@ -207,6 +213,13 @@ newYork.interests.entertainment.top3 = madGarden;
 newYork.interests.entertainment.top4 = bronxZoo;
 newYork.interests.entertainment.top5 = coneyIsl;
 
+//creating NY ENTERTAINMENT Wiki Search Terms
+//var broadWayWiki = new wikiDesc("Broadway_theatre");
+//var tonightShowWiki = new wikiDesc("The_Tonight_Show");
+//var madGardenWiki = new wikiDesc("Madison_Square_Garden");
+//var bronxZooWiki = new wikiDesc("Bronx_Zoo");
+//var coneyIslWiki = new wikiDesc("Coney_Island");
+
 //creating NY LANDMARKS attraction object
 var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444});
 var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857});
@@ -221,6 +234,13 @@ newYork.interests.landmarks.top3 = rockCenter;
 newYork.interests.landmarks.top4 = timeSquare;
 newYork.interests.landmarks.top5 = brookBridge;
 
+//creating NY LANDMARKS Wiki Search Terms
+//var libertyWiki = new wikiDesc("Statue_of_Liberty");
+//var empStateWiki = new wikiDesc("Empire_State_Building");
+//var rockCenterWiki = new wikiDesc("Rockefeller_Center");
+//var timeSquareWiki = new wikiDesc("Times_Square");
+//var brookBridgeWiki = new wikiDesc("Brooklyn_Bridge");
+
 //creating NY NATURE attraction object
 var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667});
 var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167});
@@ -234,6 +254,13 @@ newYork.interests.nature.top2 = niagara;
 newYork.interests.nature.top3 = lakeErie;
 newYork.interests.nature.top4 = letchPark;
 newYork.interests.nature.top5 = jonesBeach;
+
+//creating NY NATURE Wiki Search Terms
+//var centParkWiki = new wikiDesc("Central_Park");
+//var niagraWiki = new wikiDesc("Niagara_Falls");
+//var lakeErieWiki = new wikiDesc("Lake_Erie");
+//var letchParkWiki = new wikiDesc("Letchworth_State_Park");
+//var jonesBeachWiki = new wikiDesc("Jones_Beach_State_Park");
 
 //creating FLORIDA state object
 var florida = new state("Florida");
