@@ -54,9 +54,47 @@
         </div>
         <!-- Button -->
         <div class="col-md-4">
-            <button class="submit">Go</button>
+            <button class="submit" data-toggle="modal" data-target="#interestModal">Go</button>
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="interestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="interestModalLabel">California - Interests</h4>
+            </div>
+            <div class="modal-body">
+                <div class="tabbable"> <!-- Only required for left/right tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#tab1" data-toggle="tab">Historical</a></li>
+                        <li><a href="#tab2" data-toggle="tab">Food</a></li>
+                        <li><a href="#tab3" data-toggle="tab">Tourist Attraction</a></li>
+                        <li><a href="#tab4" data-toggle="tab">Kid Friendly</a></li>
+                        <li><a href="#tab5" data-toggle="tab">Nature</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tab1">
+                            <div class='page-header header'>Top1</div>
+                            <div class='map'>Google Map</div>
+                            <div class='photo'></div>
+                            <p>Cras pellentesque urna a leo egestas, at ullamcorper augue suscipit. Nulla id lacinia magna, non iaculis est. Praesent a placerat augue, eget eleifend purus. Aenean dignissim, orci et rutrum facilisis, tellus massa porta nulla, quis hendrerit dui ipsum vitae urna. In mattis lectus dolor, id venenatis lectus pellentesque at. Suspendisse posuere metus vel bibendum dignissim. Fusce interdum magna id libero scelerisque suscipit. Duis orci augue, rhoncus eget pharetra ac, viverra nec magna. In accumsan nulla ac suscipit pellentesque. Nulla iaculis luctus tellus, at ultricies urna hendrerit a. Aenean vehicula sodales varius. Duis sodales hendrerit odio non sagittis.</p>
+                        </div>
+                        <div class="tab-pane" id="tab2">
+                            <p>Data 2.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
 </body>
 </html>
