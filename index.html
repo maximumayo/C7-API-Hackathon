@@ -16,14 +16,19 @@
     <script src="maps.js"></script>
     <script src="script.js"></script>
     <script src="objects.js"></script>
+    <script src="backgroundSlide.js"></script>
 </head>
 <body>
+<div id="background-images"></div>
 <div class="container">
+    <h1>Destination To Fun</h1>
+    <h3>Wanna have some fun in California, New York or Florida?</h3>
+    <h4>Select a destination and let the fun begin!</h4>
     <div class="row">
         <!-- Destination -->
         <div class="col-md-4">
             <div class="dropdown" id="destination-dropdown">
-                <div class="dropdown-button dropdown-toggle" id="desinationMenu" data-toggle="dropdown"
+                <div class="dropdown-button dropdown-toggle" id="destinationMenu" data-toggle="dropdown"
                      aria-haspopup="true" aria-expanded="true">
                     <span class="dropdown-button-text">Select a Destination</span>
                     <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
@@ -32,12 +37,11 @@
                     <li><a href="#">California</a></li>
                     <li><a href="#">New York</a></li>
                     <li><a href="#">Florida</a></li>
-                    <li><a href="#">Illinois</a></li>
-                    <li><a href="#">Nevada</a></li>
-                    <li><a href="#">Washington</a></li>
-                    <li><a href="#">Massachusetts</a></li>
-                    <li><a href="#">Oregon</a></li>
-
+                    <!--<li><a href="#">Illinois</a></li>-->
+                    <!--<li><a href="#">Nevada</a></li>-->
+                    <!--<li><a href="#">Washington</a></li>-->
+                    <!--<li><a href="#">Massachusetts</a></li>-->
+                    <!--<li><a href="#">Oregon</a></li>-->
 
                 </ul>
             </div>
@@ -55,7 +59,6 @@
                     <li><a href="#">Entertainment</a></li>
                     <li><a href="#">Landmarks</a></li>
                     <li><a href="#">Nature</a></li>
-
                 </ul>
             </div>
         </div>
@@ -66,7 +69,9 @@
         </div>
     </div>
 </div>
+
 <!-- Modal for California-->
+
 <div class="modal fade" id="interestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -74,8 +79,7 @@
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-
-                <h4 class="modal-title" id="interestModalLabel">California</h4>
+                <h2 class="modal-title" id="interestModalLabel">California - Interests</h2>
             </div>
             <div class="modal-body">
                 <div class="tabbable"> <!-- Only required for left/right tabs -->
