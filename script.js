@@ -13,6 +13,7 @@
 //var caCultureArray = [griffith, huntington, getty, railroad, artwalk];
 //var goldenGate;
 
+
 //Yosemite image
 //$(document).ready(function () {
 
@@ -260,3 +261,4 @@
 //        }
 //    });
 //});
+
