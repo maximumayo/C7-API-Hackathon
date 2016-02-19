@@ -43,16 +43,11 @@
     overflow-y: auto;
 }
 
-#map, #pano {
+.map, .pano {
     float: left;
     width:50%;
     height:480px;
 }
-
-/*body {*/
-    /*padding: 20% 0;*/
-    /**/
-/*}*/
 
 .container {
     padding: 20% 10%;
@@ -64,3 +59,4 @@ h1, h3, h4{
     text-align: center;
     color: #88171E;
 }
+

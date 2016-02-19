@@ -31,8 +31,7 @@ var attraction = function (name, location, photos) {
             center: this.location,
             zoom: 14
         });
-        var panorama = new google.maps.StreetViewPanorama(
-            document.getElementById('pano'), {
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
                 position: this.location,
                 pov: {
                     heading: 34,
@@ -44,7 +43,26 @@ var attraction = function (name, location, photos) {
 
     //this will be the function that adds photos to a page
 
-    this.postPhotos = function (){//this function will loop through photo array and append them to modal
+    this.postPhotos = function (){
+        $.ajax({
+            datatype: 'json',
+            method: "get",
+            url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=3&sort=relevance&text='+ this.name,
+            success: function (result) {
+                console.log('ajax was a success' + result);
+
+                global_result = result;
+                for (var i = 0; i < global_result.photos.photo.length; i++) {
+                    var farm = global_result.photos.photo[i].farm;
+                    var id = global_result.photos.photo[i].id;
+                    var secret = global_result.photos.photo[i].secret;
+                    var server = global_result.photos.photo[i].server;
+                    var url = ('https://farm' + farm + '.staticflickr.com/' + server + "/" + id + "_" + secret + '.jpg' );
+                    attractionImg = $('<img>').attr('src', url);
+                    $(".photo").append(attractionImg);
+                }
+            }
+        });
 
         console.log("I posted a photo woohoo");
     };
