@@ -16,4 +16,5 @@ $(document).ready(function () {
         });
         $('#interestModal').modal('show'); //shows modal
     });
+
 });

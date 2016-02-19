@@ -32,3 +32,19 @@ function initializeMap() {
  var map = new google.maps.Map(document.getElementById("map"), mapProp); //Applying google map to id map div
 
  } */
+
+function wiki () {
+    $.ajax({
+        type: "GET",
+        url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=legoland&callback=?",
+        //contentType: "application/json; charset=utf-8",
+        //async: false,
+        dataType: "json",
+        success: function (result) {
+            var text = result.parse.text["*"];
+            var blurb = $('<div></div>').html(text);
+            blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
+            $('#article').html($(blurb).find('p:first')); //Add 1st paragraph to the html
+        }
+    });
+}
