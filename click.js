@@ -12,7 +12,7 @@ $(document).ready(function () {
     });
     $('.submit').on('click', function () {
         $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
-            initializeMap();
+            disney.postMap();
         });
         $('#interestModal').modal('show'); //shows modal
     });
