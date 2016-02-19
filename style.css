@@ -33,3 +33,9 @@
     padding: 10px;
 
 }
+
+#map, #pano {
+    float: left;
+    width:50%;
+    height:480px;
+}
