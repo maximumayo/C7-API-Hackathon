@@ -32,3 +32,4 @@ function initializeMap() {
  var map = new google.maps.Map(document.getElementById("map"), mapProp); //Applying google map to id map div
 
  } */
+
