@@ -32,8 +32,7 @@ var attraction = function (name, location, photos, description) {
             center: this.location,
             zoom: 14
         });
-        var panorama = new google.maps.StreetViewPanorama(
-            document.getElementById('pano'), {
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
                 position: this.location,
                 pov: {
                     heading: 34,

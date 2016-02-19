@@ -31,7 +31,7 @@
     background-color: #EEE;
     width: 100%;
     padding: 10px;
-
+    border: none;
 }
 
 .header{
@@ -43,13 +43,21 @@
     overflow-y: auto;
 }
 
-#map, #pano {
+.map, .pano {
     float: left;
     width:50%;
     height:480px;
 }
 
-
-.dropdown-button {
-    font-weight: bold;
+.container {
+    padding: 20% 10%;
+    position: absolute;
+    width: 100%;
 }
+
+h1, h3, h4{
+    text-align: center;
+    color: #88171E;
+}
+
+

@@ -2,7 +2,7 @@ $(document).ready(function () {
     //click handler for the destination dropdown menu
     $('#destination-dropdown.dropdown').on('click', '.dropdown-menu li a', function () {
         var value = $(this).text();
-        $('#desinationMenu .dropdown-button-text').text(value);
+        $('#destinationMenu .dropdown-button-text').text(value);
     });
 
     //click handler for the interests dropdown menu
@@ -15,5 +15,7 @@ $(document).ready(function () {
             disney.postMap();
         });
         $('#interestModal').modal('show'); //shows modal
+
     });
+
 });
