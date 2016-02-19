@@ -181,11 +181,11 @@ newYork.interests.entertainment.top4 = bronxZoo;
 newYork.interests.entertainment.top5 = coneyIsl;
 
 //creating NY LANDMARKS attraction object
-var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444});
-var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857});
-var rockCenter = new attraction("Rockefeller Center", {lat:40.7586, lng: -73.9792});
-var timeSquare = new attraction("Times Square", {lat: 40.7577, lng: -73.9857});
-var brookBridge = new attraction("Brooklyn Bridge", {lat:40.7057, lng: -73.9964});
+var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444}, 'http://www.nps.gov/stli/index.htm' );
+var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857}, 'http://www.esbnyc.com/');
+var rockCenter = new attraction("Rockefeller Center", {lat:40.7586, lng: -73.9792}, 'https://www.rockefellercenter.com/');
+var timeSquare = new attraction("Times Square", {lat: 40.7577, lng: -73.9857}, ' http://www.timessquarenyc.org/index.aspx');
+var brookBridge = new attraction("Brooklyn Bridge", {lat:40.7057, lng: -73.9964}, 'http://www.brooklynbridgepark.org/');
 
 //adding the NY LANDMARKS attraction objects to the state object
 newYork.interests.landmarks.top1 = liberty;
@@ -195,11 +195,11 @@ newYork.interests.landmarks.top4 = timeSquare;
 newYork.interests.landmarks.top5 = brookBridge;
 
 //creating NY NATURE attraction object
-var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667});
-var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167});
-var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000});
-var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833});
-var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361});
+var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667}, 'http://www.centralparknyc.org/');
+var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167}, ' http://www.niagarafallsstatepark.com/');
+var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000}, ' http://nysparks.com/parks/129/details.aspx');
+var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833}, ' http://nysparks.com/parks/79/details.aspx');
+var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361}, ' http://nysparks.com/parks/10/details.aspx');
 
 //adding the NY NATURE attraction objects to the state object
 newYork.interests.nature.top1 = centPark;
