@@ -4,10 +4,13 @@
 
 var state = function (name) {
     this.name = name;
-    this.culture = {};
-    this.entertainment = {};
-    this.landmarks = {};
-    this.nature = {};
+    this.interests = {
+        'culture': {},
+        'entertainment': {},
+        'landmarks': {},
+        'nature': {}
+    }
+
 };
 
 /* @constructor
@@ -21,8 +24,9 @@ var attraction = function (name, location, photos) {
     this.photos = photos;
 
     //this adds the name of the attraction to the modal
-    this.postName = function () {
-        $('.page-header.header').text(this.name);
+    this.postName = function (interest, index) {
+        console.log(interest, index);
+        $('.title' + interest + index).text(this.name);
     };
 
     //this will be the function that adds maps to a page
@@ -79,11 +83,11 @@ var railroad = new attraction("California State Railroad Museum");
 var artWalk = new attraction("Downtown LA art walk");
 
 //adding the CA CULTURE attraction objects to the state object
-california.culture.top1 = griffith;
-california.culture.top2 = huntGarden;
-california.culture.top3 = getty;
-california.culture.top4 = railroad;
-california.culture.top5 = artWalk;
+california.interests.culture.top1 = griffith;
+california.interests.culture.top2 = huntGarden;
+california.interests.culture.top3 = getty;
+california.interests.culture.top4 = railroad;
+california.interests.culture.top5 = artWalk;
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo");
@@ -93,11 +97,11 @@ var bayAqua = new attraction("Monterey Bay Aquarium");
 var legoLand = new attraction("Lego Land");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
-california.entertainment.top1 = diegoZoo;
-california.entertainment.top2 = disney;
-california.entertainment.top3 = seaWorld;
-california.entertainment.top4 = bayAqua;
-california.entertainment.top5 = legoLand;
+california.interests.entertainment.top1 = diegoZoo;
+california.interests.entertainment.top2 = disney;
+california.interests.entertainment.top3 = seaWorld;
+california.interests.entertainment.top4 = bayAqua;
+california.interests.entertainment.top5 = legoLand;
 
 //creating CA LANDMARKS attraction object
 var goldenGate = new attraction("Golden Gate Bridge");
@@ -107,11 +111,11 @@ var santaPier = new attraction("Santa Monica Pier");
 var ussMidway = new attraction("USS Midway Museum");
 
 //adding the CA LANDMARKS attraction objects to the state object
-california.landmarks.top1 = goldenGate;
-california.landmarks.top2 = hollywood;
-california.landmarks.top3 = alcatraz;
-california.landmarks.top4 = santaPier;
-california.landmarks.top5 = ussMidway;
+california.interests.landmarks.top1 = goldenGate;
+california.interests.landmarks.top2 = hollywood;
+california.interests.landmarks.top3 = alcatraz;
+california.interests.landmarks.top4 = santaPier;
+california.interests.landmarks.top5 = ussMidway;
 
 //creating CA NATURE attraction object
 var yosemite = new attraction("Yosemite National Park");
@@ -121,11 +125,11 @@ var sequoiaKings = new attraction("Sequoia and Kings Canyon National Parks");
 var lakeTahoe = new attraction("Lake Tahoe");
 
 //adding the CA NATURE attraction objects to the state object
-california.nature.top1 = yosemite;
-california.nature.top2 = joshuaTree;
-california.nature.top3 = redWood;
-california.nature.top4 = sequoiaKings;
-california.nature.top5 = lakeTahoe;
+california.interests.nature.top1 = yosemite;
+california.interests.nature.top2 = joshuaTree;
+california.interests.nature.top3 = redWood;
+california.interests.nature.top4 = sequoiaKings;
+california.interests.nature.top5 = lakeTahoe;
 
 //creating NEW YORK state object
 var newYork = new state("New York");
@@ -138,11 +142,11 @@ var publicLib = new attraction("New York Public Library");
 var guggen = new attraction("Guggenheim");
 
 //adding the NY CULTURE attraction objects to the state object
-newYork.culture.top1 = metroArt;
-newYork.culture.top2 = septElev;
-newYork.culture.top3 = ellis;
-newYork.culture.top4 = publicLib;
-newYork.culture.top5 = guggen;
+newYork.interests.culture.top1 = metroArt;
+newYork.interests.culture.top2 = septElev;
+newYork.interests.culture.top3 = ellis;
+newYork.interests.culture.top4 = publicLib;
+newYork.interests.culture.top5 = guggen;
 
 //creating NY ENTERTAINMENT attraction object
 var broadWay = new attraction("Broadway");
@@ -152,11 +156,11 @@ var bronxZoo = new attraction("Bronx Zoo");
 var coneyIsl = new attraction("Coney Island");
 
 //adding the NY ENTERTAINMENT attraction objects to the state object
-newYork.entertainment.top1 = broadWay;
-newYork.entertainment.top2 = tonightShow;
-newYork.entertainment.top3 = madGarden;
-newYork.entertainment.top4 = bronxZoo;
-newYork.entertainment.top5 = coneyIsl;
+newYork.interests.entertainment.top1 = broadWay;
+newYork.interests.entertainment.top2 = tonightShow;
+newYork.interests.entertainment.top3 = madGarden;
+newYork.interests.entertainment.top4 = bronxZoo;
+newYork.interests.entertainment.top5 = coneyIsl;
 
 //creating NY LANDMARKS attraction object
 var liberty = new attraction("Statue of Liberty");
@@ -166,11 +170,11 @@ var timeSquare = new attraction("Times Square");
 var brookBridge = new attraction("Brooklyn Bridge");
 
 //adding the NY LANDMARKS attraction objects to the state object
-newYork.landmarks.top1 = liberty;
-newYork.landmarks.top2 = empState;
-newYork.landmarks.top3 = rockCenter;
-newYork.landmarks.top4 = timeSquare;
-newYork.landmarks.top5 = brookBridge;
+newYork.interests.landmarks.top1 = liberty;
+newYork.interests.landmarks.top2 = empState;
+newYork.interests.landmarks.top3 = rockCenter;
+newYork.interests.landmarks.top4 = timeSquare;
+newYork.interests.landmarks.top5 = brookBridge;
 
 //creating NY NATURE attraction object
 var centPark = new attraction("Central Park");
@@ -180,11 +184,11 @@ var letchPark = new attraction("Letchworth State Park");
 var jonesBeach = new attraction("Jones Beach State Park");
 
 //adding the NY NATURE attraction objects to the state object
-newYork.nature.top1 = centPark;
-newYork.nature.top2 = niagara;
-newYork.nature.top3 = lakeErie;
-newYork.nature.top4 = letchPark;
-newYork.nature.top5 = jonesBeach;
+newYork.interests.nature.top1 = centPark;
+newYork.interests.nature.top2 = niagara;
+newYork.interests.nature.top3 = lakeErie;
+newYork.interests.nature.top4 = letchPark;
+newYork.interests.nature.top5 = jonesBeach;
 
 //creating FLORIDA state object
 var florida = new state("Florida");
@@ -197,11 +201,11 @@ var spaceCent = new attraction("Kennedy Space Center");
 var wonderWork = new attraction("Wonderworks");
 
 //adding the FL CULTURE attraction objects to the state object
-florida.culture.top1 = castilloMarc;
-florida.culture.top2 = dali;
-florida.culture.top3 = navalMuse;
-florida.culture.top4 = spaceCent;
-florida.culture.top5 = wonderWork;
+florida.interests.culture.top1 = castilloMarc;
+florida.interests.culture.top2 = dali;
+florida.interests.culture.top3 = navalMuse;
+florida.interests.culture.top4 = spaceCent;
+florida.interests.culture.top5 = wonderWork;
 
 //creating FL ENTERTAINMENT attraction object
 var disneyWorld = new attraction("Walt Disney World");
@@ -211,11 +215,11 @@ var disCove = new attraction("Discovery Cove");
 var epcot = new attraction("Epcot");
 
 //adding the FL ENTERTAINMENT attraction objects to the state object
-florida.entertainment.top1 = disneyWorld;
-florida.entertainment.top2 = buschGard;
-florida.entertainment.top3 = univStudio;
-florida.entertainment.top4 = disCove;
-florida.entertainment.top5 = epcot;
+florida.interests.entertainment.top1 = disneyWorld;
+florida.interests.entertainment.top2 = buschGard;
+florida.interests.entertainment.top3 = univStudio;
+florida.interests.entertainment.top4 = disCove;
+florida.interests.entertainment.top5 = epcot;
 
 //creating FL LANDMARKS attraction object
 var overHigh = new attraction("Overseas Highway");
@@ -225,11 +229,11 @@ var bridgeLion = new attraction("Bridge of Lions");
 var plazaFerd = new attraction("Plaza Ferdinand VII");
 
 //adding the FL LANDMARKS attraction objects to the state object
-florida.landmarks.top1 = overHigh;
-florida.landmarks.top2 = keyWest;
-florida.landmarks.top3 = bokTower;
-florida.landmarks.top4 = bridgeLion;
-florida.landmarks.top5 = plazaFerd;
+florida.interests.landmarks.top1 = overHigh;
+florida.interests.landmarks.top2 = keyWest;
+florida.interests.landmarks.top3 = bokTower;
+florida.interests.landmarks.top4 = bridgeLion;
+florida.interests.landmarks.top5 = plazaFerd;
 
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades");
@@ -239,11 +243,11 @@ var flCavern = new attraction("Florida Caverns State Park");
 var fallWater = new attraction("Falling Waters State Park");
 
 //adding the FL NATURE attraction objects to the state object
-florida.nature.top1 = everGlade;
-florida.nature.top2 = dryTort;
-florida.nature.top3 = aerialAdv;
-florida.nature.top4 = flCavern;
-florida.nature.top5 = fallWater;
+florida.interests.nature.top1 = everGlade;
+florida.interests.nature.top2 = dryTort;
+florida.interests.nature.top3 = aerialAdv;
+florida.interests.nature.top4 = flCavern;
+florida.interests.nature.top5 = fallWater;
 
 /*
  This is what a state object would look like:
