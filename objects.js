@@ -31,7 +31,9 @@ var attraction = function (name, location, photos) {
     };
 
     //this will be the function that adds photos to a page
-    this.postPhotos = function () {
+
+    this.postPhotos = function (){//this function will loop through photo array and append them to modal
+
         console.log("I posted a photo woohoo");
     };
 };
@@ -131,25 +133,25 @@ var liberty = new attraction("Statue of Liberty");
 var empState = new attraction("Empire State Building");
 var rockCenter = new attraction("Rockefeller Center");
 var timeSquare = new attraction("Times Square");
-var brookBidge = new attraction("Brooklyn Bridge");
+var brookBridge = new attraction("Brooklyn Bridge");
 
 //adding the NY LANDMARKS attraction objects to the state object
 newYork.landmarks.top1 = liberty;
 newYork.landmarks.top2 = empState;
 newYork.landmarks.top3 = rockCenter;
 newYork.landmarks.top4 = timeSquare;
-newYork.landmarks.top5 = brookBidge;
+newYork.landmarks.top5 = brookBridge;
 
 //creating NY NATURE attraction object
 var centPark = new attraction("Central Park");
-var niagra = new attraction("Niagara Falls");
+var niagara = new attraction("Niagara Falls");
 var lakeErie = new attraction("Lake Erie");
 var letchPark = new attraction("Letchworth State Park");
 var jonesBeach = new attraction("Jones Beach State Park");
 
 //adding the NY NATURE attraction objects to the state object
 newYork.nature.top1 = centPark;
-newYork.nature.top2 = niagra;
+newYork.nature.top2 = niagara;
 newYork.nature.top3 = lakeErie;
 newYork.nature.top4 = letchPark;
 newYork.nature.top5 = jonesBeach;
@@ -167,5 +169,4 @@ newYork.nature.top5 = jonesBeach;
  landmarks: {},
  nature: {},
  }
-
  */
