@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Destination To Fun</title>
     <script src="https://code.jquery.com/jquery.min.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw=="
           crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Martel+Sans:600,800' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="style.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A=="
@@ -16,9 +17,12 @@
     <script src="maps.js"></script>
     <script src="script.js"></script>
     <script src="objects.js"></script>
+    <script src="backgroundSlide.js"></script>
 </head>
 <body>
-<div id="article"></div>
+
+<div id="background-images"></div>
+
 <div class="container">
     <h1>Destination To Fun</h1>
     <h3>Wanna have some fun in California, New York or Florida?</h3>
@@ -42,7 +46,6 @@
                     <!--<li><a href="#">Massachusetts</a></li>-->
                     <!--<li><a href="#">Oregon</a></li>-->
 
-
                 </ul>
             </div>
         </div>
@@ -59,7 +62,6 @@
                     <li><a href="#">Entertainment</a></li>
                     <li><a href="#">Landmarks</a></li>
                     <li><a href="#">Nature</a></li>
-
                 </ul>
             </div>
         </div>
@@ -70,7 +72,9 @@
         </div>
     </div>
 </div>
+
 <!-- Modal for California-->
+
 <div class="modal fade" id="interestModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -78,20 +82,19 @@
 
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-
-                <h4 class="modal-title" id="interestModalLabel">California - Interests</h4>
+                <h2 class="modal-title" id="interestModalLabel">California - Interests</h2>
             </div>
             <div class="modal-body">
                 <div class="tabbable"> <!-- Only required for left/right tabs -->
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab1" data-toggle="tab">Culture</a></li>
-                        <li><a href="#tab2" data-toggle="tab">Entertainment</a></li>
-                        <li><a href="#tab3" data-toggle="tab">Landmarks</a></li>
-                        <li><a href="#tab5" data-toggle="tab">Nature</a></li>
+                        <li><a href="#cultureDiv" data-toggle="tab">Culture</a></li>
+                        <li><a href="#entertainmentDiv" data-toggle="tab">Entertainment</a></li>
+                        <li><a href="#landmarksDiv" data-toggle="tab">Landmarks</a></li>
+                        <li><a href="#natureDiv" data-toggle="tab">Nature</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div class="tab-pane active" id="cultureDiv">
-                            <div class='page-header header titleCulture1'>Top1</div>
+                        <div class="tab-pane" id="cultureDiv">
+                            <div class='page-header header titleCulture1'>Culture Top1</div>
                             <div id="mapCulture1" class="map"></div>
                             <div id="panoCulture1" class="pano"></div>
                             <div id='photoCulture1'></div>
@@ -118,7 +121,7 @@
                         </div>
 
                         <div class="tab-pane" id="entertainmentDiv">
-                            <div class='page-header header titleEntertainment1'>Top1</div>
+                            <div class='page-header header titleEntertainment1'>Entertainment Top1</div>
                             <div id="mapEntertainment1" class="map"></div>
                             <div id="panoEntertainment1" class="pano"></div>
                             <div id='photoEntertainment1'></div>
@@ -144,8 +147,8 @@
                             <div id='photoEntertainment5'></div>
                         </div>
 
-                        <div class="tab-pane" id="LandmarksDiv">
-                            <div class='page-header header titleLandmarks1'>Top1</div>
+                        <div class="tab-pane" id="landmarksDiv">
+                            <div class='page-header header titleLandmarks1'>Landmarks Top1</div>
                             <div id="mapLandmarks1" class="map"></div>
                             <div id="panoLandmarks1" class="pano"></div>
                             <div id='photoLandmarks1'></div>
@@ -163,7 +166,7 @@
                             <div class='page-header header titleLandmarks4'>Top4</div>
                             <div id="mapLandmarks4"></div>
                             <div id="panoLandmarks4"></div>
-                            <div class='photoLandmarks4'></div>
+                            <div id='photoLandmarks4'></div>
 
                             <div class='page-header header titleLandmarks5'>Top5</div>
                             <div id="mapLandmarks5" class="map"></div>
@@ -171,21 +174,21 @@
                             <div id='photoLandmarks5'></div>
                         </div>
 
-                        <div class="tab-pane" id="NatureDiv">
-                            <div class='page-header header titleNature1'>Top1</div>
-                            <div id="Nature1" class="map"></div>
-                            <div id="Nature1" class="pano"></div>
-                            <div id='Nature1'></div>
+                        <div class="tab-pane" id="natureDiv">
+                            <div class='page-header header titleNature1'>Nature Top1</div>
+                            <div id="mapNature1" class="map"></div>
+                            <div id="panoNature1" class="pano"></div>
+                            <div id='photoNature1'></div>
 
                             <div class='page-header header titleNature2'>Top2</div>
-                            <div id="Nature2" class="map"></div>
-                            <div id="Nature2" class="pano"></div>
-                            <div id='Nature2'></div>
+                            <div id="mapNature2" class="map"></div>
+                            <div id="panoNature2" class="pano"></div>
+                            <div id='photoNature2'></div>
 
                             <div class='page-header header titleNature3'>Top3</div>
-                            <div id="Nature3" class="map"></div>
-                            <div id="Nature3" class="pano"></div>
-                            <div id='Nature3'></div>
+                            <div id="mapNature3" class="map"></div>
+                            <div id="panoNature3" class="pano"></div>
+                            <div id='photoNature3'></div>
 
                             <div class='page-header header titleNature4'>Top4</div>
                             <div id="mapNature4" class="map"></div>
