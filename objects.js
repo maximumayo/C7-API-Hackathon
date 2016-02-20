@@ -290,11 +290,11 @@ florida.interests.culture.top5 = wonderWork;
 //var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
 
 //creating FL ENTERTAINMENT attraction object
-var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/");
-var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216}, "https://seaworldparks.com/en/buschgardens-tampa/");
-var univStudio = new attraction("Universal Studios", {lat: 28.4759, lng: -81.4687}, "https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx");
-var disCove = new attraction("Discovery Cove", {lat: 28.4054, lng: -81.4617}, "https://discoverycove.com/");
-var epcot = new attraction("Epcot", {lat:28.3710 , lng: -81.5500}, "https://disneyworld.disney.go.com/destinations/epcot/");
+var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
+var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216}, "https://seaworldparks.com/en/buschgardens-tampa/", 'Busch_Gardens_Tampa');
+var univStudio = new attraction("Universal Studios", {lat: 28.4759, lng: -81.4687}, "https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx", 'Universal_Parks_%26_Resorts');
+var disCove = new attraction("Discovery Cove", {lat: 28.4054, lng: -81.4617}, "https://discoverycove.com/", 'Discovery_Cove');
+var epcot = new attraction("Epcot", {lat:28.3710 , lng: -81.5500}, "https://disneyworld.disney.go.com/destinations/epcot/", 'Epcot');
 
 //adding the FL ENTERTAINMENT attraction objects to the state object
 florida.interests.entertainment.top1 = disneyWorld;
@@ -311,11 +311,12 @@ florida.interests.entertainment.top5 = epcot;
 //var epcotWiki = new wikiDesc('Epcot');
 
 //creating FL LANDMARKS attraction object
-var overHigh = new attraction("Overseas Highway", {lat: 24.7836, lng: -80.9033}, "http://www.fla-keys.com/highway.cfm");
-var keyWest = new attraction("Key West", {lat: 24.5592, lng: -81.7840}, "http://keywest.com/");
-var bokTower = new attraction("Bok Tower Gardens", {lat: 27.9353, lng: -81.5775}, "https://boktowergardens.org/");
-var bridgeLion = new attraction("Bridge of Lions", {lat: 29.8925, lng: -81.3075}, "https://en.wikipedia.org/wiki/Bridge_of_Lions");
-var plazaFerd = new attraction("Plaza Ferdinand VII", {lat: 30.4075, lng: -87.2139}, "http://www.nps.gov/nr/travel/american_latino_heritage/Plaza_Ferdinand_VII.html");
+var overHigh = new attraction("Overseas Highway", {lat: 24.7836, lng: -80.9033}, "http://www.fla-keys.com/highway.cfm", 'Overseas_Highway');
+var keyWest = new attraction("Key West", {lat: 24.5592, lng: -81.7840}, "http://keywest.com/", 'Key_West,_Florida');
+var bokTower = new attraction("Bok Tower Gardens", {lat: 27.9353, lng: -81.5775}, "https://boktowergardens.org/", 'Bok_Tower_Gardens');
+var bridgeLion = new attraction("Bridge of Lions", {lat: 29.8925, lng: -81.3075}, "https://en.wikipedia.org/wiki/Bridge_of_Lions", 'Bridge_of_Lions');
+var plazaFerd = new attraction("Plaza Ferdinand VII", {lat: 30.4075, lng: -87.2139}, "http://www.nps.gov/nr/travel/american_latino_heritage/Plaza_Ferdinand_VII.html", 'Plaza_Ferdinand_VII');
+
 
 //adding the FL LANDMARKS attraction objects to the state object
 florida.interests.landmarks.top1 = overHigh;
@@ -332,11 +333,12 @@ florida.interests.landmarks.top5 = plazaFerd;
 //var plazaFredWiki = new wikiDesc('Plaza_Ferdinand_VII');
 
 //creating FL NATURE attraction object
-var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333}, "http://www.nps.gov/ever/index.htm");
-var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733}, "http://www.nps.gov/drto/index.htm");
-var aerialAdv = new attraction("Aerial Adventure Park", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park");
-var flCavern = new attraction("Florida Caverns State Park", {lat: 30.8139, lng: -85.2331}, "https://www.floridastateparks.org/park/Florida-Caverns");
-var fallWater = new attraction("Falling Waters State Park", {lat: 30.7281, lng: -85.5286}, "https://www.floridastateparks.org/park/Falling-Waters");
+var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333}, "http://www.nps.gov/ever/index.htm", 'Everglades_National_Park');
+var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733}, "http://www.nps.gov/drto/index.htm", 'Dry_Tortugas_National_Park');
+var aerialAdv = new attraction("Aerial Adventure Park", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
+var flCavern = new attraction("Florida Caverns State Park", {lat: 30.8139, lng: -85.2331}, "https://www.floridastateparks.org/park/Florida-Caverns", 'Florida_Caverns_State_Park');
+var fallWater = new attraction("Falling Waters State Park", {lat: 30.7281, lng: -85.5286}, "https://www.floridastateparks.org/park/Falling-Waters", 'Falling_Waters_State_Park');
+
 
 //adding the FL NATURE attraction objects to the state object
 florida.interests.nature.top1 = everGlade;
