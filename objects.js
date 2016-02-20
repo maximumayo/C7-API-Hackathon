@@ -96,7 +96,7 @@ var california = new state("California");
 //creating CA CULTURE attraction object
 
 var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/");
-var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100}, "http://www.huntington.org/");
+var huntGarden = new attraction("Huntington Garden", {lat: 34.1272, lng: -118.1100}, "http://www.huntington.org/");
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751}, "http://www.getty.edu/museum/");
 var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044}, "http://www.csrmf.org/");
 var artWalk = new attraction("Downtown LA art walk", {lat: 34.0570, lng: -118.2380}, "http://downtownartwalk.org/");
@@ -117,10 +117,10 @@ california.interests.culture.top5 = artWalk;
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658}, "http://zoo.sandiegozoo.org/");
-var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/");
+var disney = new attraction("Disneyland", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/");
 var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "https://seaworldparks.com/en/seaworld-sandiego/");
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "http://www.montereybayaquarium.org/");
-var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/");
+var legoLand = new attraction("Legoland", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
@@ -204,10 +204,10 @@ newYork.interests.culture.top5 = guggen;
 
 //creating NY ENTERTAINMENT attraction object
 var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835}, "http://www.broadway.com/");
-var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790}, "http://www.nbc.com/the-tonight-show");
+var tonightShow = new attraction("The Tonight Show Jimmy Fallon", {lat: 40.7590, lng: -73.9790}, "http://www.nbc.com/the-tonight-show");
 var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936}, "http://www.thegarden.com/");
 var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754}, "http://bronxzoo.com/");
-var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859}, "http://www.coneyisland.com/");
+var coneyIsl = new attraction("Coney Island New York", {lat: 40.5749, lng: -73.9859}, "http://www.coneyisland.com/");
 
 //adding the NY ENTERTAINMENT attraction objects to the state object
 newYork.interests.entertainment.top1 = broadWay;
@@ -245,11 +245,11 @@ newYork.interests.landmarks.top5 = brookBridge;
 //var brookBridgeWiki = new wikiDesc("Brooklyn_Bridge");
 
 //creating NY NATURE attraction object
-var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667}, "http://www.centralparknyc.org/");
+var centPark = new attraction("Central Park New York", {lat: 40.7833, lng: -73.9667}, "http://www.centralparknyc.org/");
 var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167}, "http://www.niagarafallsstatepark.com/");
 var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000}, "http://nysparks.com/parks/129/details.aspx");
 var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833}, "http://nysparks.com/parks/79/details.aspx");
-var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361}, "http://nysparks.com/parks/10/details.aspx");
+var jonesBeach = new attraction("Jones Beach", {lat: 40.6142, lng: -73.5361}, "http://nysparks.com/parks/10/details.aspx");
 
 //adding the NY NATURE attraction objects to the state object
 newYork.interests.nature.top1 = centPark;
@@ -273,7 +273,7 @@ var castilloMarc = new attraction("Castillo de San Marcos", {lat: 29.8978, lng: 
 var dali = new attraction("Salvador Dali Museum", {lat: 27.7605833, lng: -82.6362096}, "http://thedali.org/");
 var navalMuse = new attraction("National Naval Aviation Museum", {lat: 30.3496, lng: -87.3036}, "http://www.navalaviationmuseum.org/");
 var spaceCent = new attraction("Kennedy Space Center", {lat: 28.5241, lng: -80.6508}, "https://www.kennedyspacecenter.com/");
-var wonderWork = new attraction("Wonderworks", {lat: 28.4337, lng: -81.4717}, "http://www.wonderworksonline.com/");
+var wonderWork = new attraction("Wonder works orlando florida", {lat: 28.4337, lng: -81.4717}, "http://www.wonderworksonline.com/");
 
 //adding the FL CULTURE attraction objects to the state object
 florida.interests.culture.top1 = castilloMarc;
@@ -290,7 +290,7 @@ florida.interests.culture.top5 = wonderWork;
 //var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
 
 //creating FL ENTERTAINMENT attraction object
-var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
+var disneyWorld = new attraction("Disney world", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
 var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216}, "https://seaworldparks.com/en/buschgardens-tampa/", 'Busch_Gardens_Tampa');
 var univStudio = new attraction("Universal Studios", {lat: 28.4759, lng: -81.4687}, "https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx", 'Universal_Parks_%26_Resorts');
 var disCove = new attraction("Discovery Cove", {lat: 28.4054, lng: -81.4617}, "https://discoverycove.com/", 'Discovery_Cove');
@@ -335,7 +335,7 @@ florida.interests.landmarks.top5 = plazaFerd;
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333}, "http://www.nps.gov/ever/index.htm", 'Everglades_National_Park');
 var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733}, "http://www.nps.gov/drto/index.htm", 'Dry_Tortugas_National_Park');
-var aerialAdv = new attraction("Aerial Adventure Park", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
+var aerialAdv = new attraction("Treetrek Adventures", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
 var flCavern = new attraction("Florida Caverns State Park", {lat: 30.8139, lng: -85.2331}, "https://www.floridastateparks.org/park/Florida-Caverns", 'Florida_Caverns_State_Park');
 var fallWater = new attraction("Falling Waters State Park", {lat: 30.7281, lng: -85.5286}, "https://www.floridastateparks.org/park/Falling-Waters", 'Falling_Waters_State_Park');
 
