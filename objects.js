@@ -89,6 +89,8 @@ var attraction = function (name, location, url, wiki) {
                 var blurb = $('<div></div>').html(text);
                 blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
                 $('#desc' + interest + index).html($(blurb).find('p:first')); //Add 1st paragraph to the html
+                $('#desc' + interest + index).append($(blurb).find('p:nth-child(2)')); //Add 2nd paragraph to the html
+
 
             }
         });
@@ -117,13 +119,6 @@ california.interests.culture.top3 = getty;
 california.interests.culture.top4 = railroad;
 california.interests.culture.top5 = artWalk;
 
-//creating CA CULTURE Wiki Search Terms
-//var griffithwiki = new wikiDesc('Griffith_Observatory');
-//var huntwiki = new wikiDesc('Huntington_Library');
-//var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
-//var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
-//var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
-
 //creating CA ENTERTAINMENT attraction object
 
 var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658}, "http://zoo.sandiegozoo.org/", "San_Diego_Zoo");
@@ -140,13 +135,6 @@ california.interests.entertainment.top2 = disney;
 california.interests.entertainment.top3 = seaWorld;
 california.interests.entertainment.top4 = bayAqua;
 california.interests.entertainment.top5 = legoLand;
-
-//creating CA ENTERTAINMENT Wiki Search Terms
-//var diegoZooWiki = new wikiDesc("San_Diego_Zoo");
-//var disneyWiki = new wikiDesc("Disneyland");
-//var seaWorldWiki = new wikiDesc("SeaWorld");
-//var bayAquaWiki = new wikiDesc("Monterey_Bay_Aquarium");
-//var legoLandWiki = new wikiDesc("Legoland");
 
 //creating CA LANDMARKS attraction object
 
@@ -167,13 +155,6 @@ california.interests.landmarks.top3 = alcatraz;
 california.interests.landmarks.top4 = santaPier;
 california.interests.landmarks.top5 = ussMidway;
 
-//creating CA LANDMARKS Wiki Search Terms
-//var goldenGateWiki = new wikiDesc("Golden_Gate_Bridge");
-//var hollywoodWiki = new wikiDesc("Hollywood");
-//var alcatrazWiki = new wikiDesc("Alcatraz_Island");
-//var santaPierWiki = new wikiDesc("Santa_Monica_Pier");
-//var ussMidwayWiki = new wikiDesc("USS_Midway_Museum");
-
 //creating CA NATURE attraction object
 var yosemite = new attraction("Yosemite National Park", {lat: 37.8499, lng: -119.5677}, "http://www.nps.gov/yose/index.htm", "Yosemite_National_Park");
 var joshuaTree = new attraction("Joshua Tree National Park", {lat: 33.7884, lng: -115.8982}, "http://www.nps.gov/jotr/index.htm", "Joshua_Tree_National_Park");
@@ -187,13 +168,6 @@ california.interests.nature.top2 = joshuaTree;
 california.interests.nature.top3 = redWood;
 california.interests.nature.top4 = sequoiaKings;
 california.interests.nature.top5 = lakeTahoe;
-
-//creating CA NATURE Wiki Search Terms
-//var yosemiteWiki = new wikiDesc("Yosemite_National_Park");
-//var joshuaTreeWiki = new wikiDesc("Joshua_Tree_National_Park");
-//var redWoodWiki = new wikiDesc("Redwood_National_and_State_Parks");
-//var sequioaKingsWiki = new wikiDesc("Sequoia_and_Kings_Canyon_National_Parks");
-//var lakeTahoeWiki = new wikiDesc("Lake_Tahoe");
 
 //creating NEW YORK state object
 var newYork = new state("New York");
@@ -215,13 +189,6 @@ newYork.interests.culture.top3 = ellis;
 newYork.interests.culture.top4 = publicLib;
 newYork.interests.culture.top5 = guggen;
 
-//creating NY CULTURE Wiki Search Terms
-//var metroArtWiki = new wikiDesc("Metropolitan_Museum_of_Art");
-//var septElevWiki = new wikiDesc("National_September_11_Memorial_%26_Museum");
-//var ellilsWiki = new wikiDesc("Ellis_Island");
-//var publicLibWiki = new wikiDesc("New_York_Public_Library");
-//var guggenWiki = new wikiDesc("Solomon_R._Guggenheim_Museum");
-
 //creating NY ENTERTAINMENT attraction object
 
 var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835}, "http://www.broadway.com/", "Broadway_theatre");
@@ -238,13 +205,6 @@ newYork.interests.entertainment.top2 = tonightShow;
 newYork.interests.entertainment.top3 = madGarden;
 newYork.interests.entertainment.top4 = bronxZoo;
 newYork.interests.entertainment.top5 = coneyIsl;
-
-//creating NY ENTERTAINMENT Wiki Search Terms
-//var broadWayWiki = new wikiDesc("Broadway_theatre");
-//var tonightShowWiki = new wikiDesc("The_Tonight_Show");
-//var madGardenWiki = new wikiDesc("Madison_Square_Garden");
-//var bronxZooWiki = new wikiDesc("Bronx_Zoo");
-//var coneyIslWiki = new wikiDesc("Coney_Island");
 
 //creating NY LANDMARKS attraction object
 
@@ -263,13 +223,6 @@ newYork.interests.landmarks.top3 = rockCenter;
 newYork.interests.landmarks.top4 = timeSquare;
 newYork.interests.landmarks.top5 = brookBridge;
 
-//creating NY LANDMARKS Wiki Search Terms
-//var libertyWiki = new wikiDesc("Statue_of_Liberty");
-//var empStateWiki = new wikiDesc("Empire_State_Building");
-//var rockCenterWiki = new wikiDesc("Rockefeller_Center");
-//var timeSquareWiki = new wikiDesc("Times_Square");
-//var brookBridgeWiki = new wikiDesc("Brooklyn_Bridge");
-
 //creating NY NATURE attraction object
 
 var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667}, "http://www.centralparknyc.org/", "Central_Park");
@@ -286,13 +239,6 @@ newYork.interests.nature.top2 = niagara;
 newYork.interests.nature.top3 = lakeErie;
 newYork.interests.nature.top4 = letchPark;
 newYork.interests.nature.top5 = jonesBeach;
-
-//creating NY NATURE Wiki Search Terms
-//var centParkWiki = new wikiDesc("Central_Park");
-//var niagraWiki = new wikiDesc("Niagara_Falls");
-//var lakeErieWiki = new wikiDesc("Lake_Erie");
-//var letchParkWiki = new wikiDesc("Letchworth_State_Park");
-//var jonesBeachWiki = new wikiDesc("Jones_Beach_State_Park");
 
 //creating FLORIDA state object
 var florida = new state("Florida");
@@ -311,15 +257,8 @@ florida.interests.culture.top3 = navalMuse;
 florida.interests.culture.top4 = spaceCent;
 florida.interests.culture.top5 = wonderWork;
 
-//creating FL culture Wiki Search Terms
-//var castilloMarcWiki = new wikiDesc('Castillo_de_San_Marcos');
-//var daliWiki = new wikiDesc('Salvador_Dalí_Museum');
-//var navalMuseWiki = new wikiDesc('National_Naval_Aviation_Museum');
-//var spaceCentWiki = new wikiDesc('Kennedy_Space_Center');
-//var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
-
 //creating FL ENTERTAINMENT attraction object
-var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
+var disneyWorld = new attraction("Disney world", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
 var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216}, "https://seaworldparks.com/en/buschgardens-tampa/", 'Busch_Gardens_Tampa');
 var univStudio = new attraction("Universal Studios", {lat: 28.4759, lng: -81.4687}, "https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx", 'Universal_Parks_%26_Resorts');
 var disCove = new attraction("Discovery Cove", {lat: 28.4054, lng: -81.4617}, "https://discoverycove.com/", 'Discovery_Cove');
@@ -331,13 +270,6 @@ florida.interests.entertainment.top2 = buschGard;
 florida.interests.entertainment.top3 = univStudio;
 florida.interests.entertainment.top4 = disCove;
 florida.interests.entertainment.top5 = epcot;
-
-//creating FL ENTERTAINMENT Wiki Search Terms
-//var disneyWorldWiki = new wikiDesc('Walt_Disney_World');
-//var buschGardWiki = new wikiDesc('Busch_Gardens_Tampa');
-//var univStudioWiki = new wikiDesc('Universal_Parks_%26_Resorts');
-//var disCoveWiki = new wikiDesc('Discovery_Cove');
-//var epcotWiki = new wikiDesc('Epcot');
 
 //creating FL LANDMARKS attraction object
 var overHigh = new attraction("Overseas Highway", {lat: 24.7836, lng: -80.9033}, "http://www.fla-keys.com/highway.cfm", 'Overseas_Highway');
@@ -354,20 +286,12 @@ florida.interests.landmarks.top3 = bokTower;
 florida.interests.landmarks.top4 = bridgeLion;
 florida.interests.landmarks.top5 = plazaFerd;
 
-//creating FL LANDMARKS Wiki Search Terms
-//var overHighWiki = new wikiDesc('Overseas_Highway');
-//var keyWestWiki = new wikiDesc('Key_West,_Florida');
-//var bokTowerWiki = new wikiDesc('Bok_Tower_Gardens');
-//var bridgeLionWiki = new wikiDesc('Bridge_of_Lions');
-//var plazaFredWiki = new wikiDesc('Plaza_Ferdinand_VII');
-
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333}, "http://www.nps.gov/ever/index.htm", 'Everglades_National_Park');
 var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733}, "http://www.nps.gov/drto/index.htm", 'Dry_Tortugas_National_Park');
-var aerialAdv = new attraction("Aerial Adventure Park", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
+var aerialAdv = new attraction("Treetrek Adventures", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
 var flCavern = new attraction("Florida Caverns State Park", {lat: 30.8139, lng: -85.2331}, "https://www.floridastateparks.org/park/Florida-Caverns", 'Florida_Caverns_State_Park');
 var fallWater = new attraction("Falling Waters State Park", {lat: 30.7281, lng: -85.5286}, "https://www.floridastateparks.org/park/Falling-Waters", 'Falling_Waters_State_Park');
-
 
 //adding the FL NATURE attraction objects to the state object
 florida.interests.nature.top1 = everGlade;
@@ -375,183 +299,4 @@ florida.interests.nature.top2 = dryTort;
 florida.interests.nature.top3 = aerialAdv;
 florida.interests.nature.top4 = flCavern;
 florida.interests.nature.top5 = fallWater;
-
-//creating FL NATURE Wiki Search Terms
-//var everGladeWiki = new wikiDesc('Everglades_National_Park');
-//var dryTortWiki = new wikiDesc('Dry_Tortugas_National_Park');
-//var aerialAdvWiki = new wikiDesc('Adventure_park');
-//var flCavernWiki = new wikiDesc('Florida_Caverns_State_Park');
-//var fallWaterWiki = new wikiDesc('Falling_Waters_State_Park');
-
-/*
- This is what a state object would look like:
-
- california = {
- name: 'California',
- nature: {
- top1: {} //this object here is the yosemite object we created
- }
- culture: {},
- entertainment: {},
- landmarks: {},
- nature: {},
- }
- */
-/*Attraction Links
-California Culture
-
- http://griffithobservatory.org/
-
- http://www.huntington.org/
-
- http://www.getty.edu/museum/
-
- http://www.csrmf.org/
-
- http://downtownartwalk.org/
-
- California Entertainment
-
- http://zoo.sandiegozoo.org/
-
- https://disneyland.disney.go.com/
-
- https://seaworldparks.com/en/seaworld-sandiego/
-
- http://www.montereybayaquarium.org/
-
- http://www.legoland.com/california/
-
- California Landmarks
-
- http://goldengatebridge.org/
-
- http://hollywoodsign.org/
-
- http://www.nps.gov/alca/index.htm
-
- http://santamonicapier.org/
-
- http://www.midway.org/
-
-
- California Nature
-
- http://www.nps.gov/yose/index.htm
-
- http://www.nps.gov/jotr/index.htm
-
- http://www.nps.gov/redw/index.htm
-
- http://www.nps.gov/seki/index.htm
-
- http://www.visitinglaketahoe.com/
-
-
-
- New York Culture
-
- http://www.metmuseum.org/
-
- http://www.911memorial.org/
-
- http://www.libertyellisfoundation.org/
-
- http://www.nypl.org/
-
- http://www.guggenheim.org/
-
-
- New York Entertainment
-
- http://www.broadway.com/
-
- http://www.nbc.com/the-tonight-show
-
- http://www.thegarden.com/
-
- http://bronxzoo.com/
-
- http://www.coneyisland.com/
-
-
- New York Landmarks
-
- http://www.nps.gov/stli/index.htm
-
- http://www.esbnyc.com/
-
- https://www.rockefellercenter.com/
-
- http://www.timessquarenyc.org/index.aspx
-
- http://www.brooklynbridgepark.org/
-
-
- New York Nature
-
- http://www.centralparknyc.org/
-
- http://www.niagarafallsstatepark.com/
-
- http://nysparks.com/parks/129/details.aspx
-
- http://nysparks.com/parks/79/details.aspx
-
- http://nysparks.com/parks/10/details.aspx
-
- Florida Culture
-
- http://www.nps.gov/casa/index.htm
-
- http://thedali.org/
-
- http://www.navalaviationmuseum.org/
-
- https://www.kennedyspacecenter.com/
-
- http://www.wonderworksonline.com/
-
-
- Florida Entertainment
-
- https://disneyworld.disney.go.com/
-
- https://seaworldparks.com/en/buschgardens-tampa/
-
- https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx
-
- https://discoverycove.com/
-
- https://disneyworld.disney.go.com/destinations/epcot/
-
- Florida Landmarks
-
- http://www.fla-keys.com/highway.cfm
-
- http://keywest.com/
-
- https://boktowergardens.org/
-
- https://en.wikipedia.org/wiki/Bridge_of_Lions
-
- http://www.nps.gov/nr/travel/american_latino_heritage/Plaza_Ferdinand_VII.html
-
-
- Florida Nature
-
- http://www.nps.gov/ever/index.htm
-
- http://www.nps.gov/drto/index.htm
-
- http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park
-
- https://www.floridastateparks.org/park/Florida-Caverns
-
- https://www.floridastateparks.org/park/Falling-Waters
-
-*/
-
-
-
 

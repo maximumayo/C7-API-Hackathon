@@ -16,3 +16,20 @@ Hackathon project involving the combination of different data sources into an ap
 
 ### Deadline: 
 - 5:30PM Friday, February 19th 2016
+
+###Team Swimmingly Red Birdie
+Paul
+Deanna
+Srayuth
+Jaison
+Max
+Trisha
+
+###Description
+Destination to Fun is an app that provides lists of the top attractions in
+the US. For each attraction, photos from flickr, a description
+from wikipedia, and the google maps coordinates are displayed. A link to
+the attraction's website is also provided in the title of the attraction.
+This is a great way to find ideas for your next vacation in the US!
+
+
