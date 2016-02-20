@@ -121,7 +121,7 @@ var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658},
 var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/", "Disneyland");
 var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "https://seaworldparks.com/en/seaworld-sandiego/", "SeaWorld");
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "http://www.montereybayaquarium.org/", "Monterey_Bay_Aquarium");
-var legoLand = new attraction("Legoland California", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/", "Legoland");
+var legoLand = new attraction("Legoland California", {lat: 33.1267, lng: -117.3111}, "http://www.legoland.com/california/", "Legoland");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
