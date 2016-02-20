@@ -31,9 +31,9 @@ var attraction = function (name, location, url, wiki) {
     };
 
     //this will be the function that adds maps to a page
-    this.postMap = function (interest, index) {
-        var map = new google.maps.Map(document.getElementById('map'  + interest + index), {
-            center: this.location,
+    this.postMap = function (interest, index) {//left side of the map
+        var map = new google.maps.Map(document.getElementById('map'  + interest + index), {//id map, google.maps.Map is google's jquery
+            center: this.location,//this is long, lat
             zoom: 14
         });
         var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'  + interest + index), {
