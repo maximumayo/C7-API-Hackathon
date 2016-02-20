@@ -95,7 +95,7 @@ var california = new state("California");
 
 //creating CA CULTURE attraction object
 
-var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/");
+var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/", 'Griffith_Observatory');
 var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100}, "http://www.huntington.org/");
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751}, "http://www.getty.edu/museum/");
 var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044}, "http://www.csrmf.org/");
