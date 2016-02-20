@@ -125,7 +125,7 @@ california.interests.culture.top5 = artWalk;
 //creating CA ENTERTAINMENT attraction object
 
 var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658}, "http://zoo.sandiegozoo.org/");
-var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/");
+var disney = new attraction("Disneyland", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/");
 var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "https://seaworldparks.com/en/seaworld-sandiego/");
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "http://www.montereybayaquarium.org/");
 var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/");
