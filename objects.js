@@ -46,7 +46,10 @@ var attraction = function (name, location, url, wiki) {
         map.setStreetView(panorama);
     };
 
-    //this will be the function that adds photos to a page
+    /*This function receives the photo objects from the Flickr API.  It takes in the parameters interest and index
+    * postman was used to find the search criteria.  this.name was added to the url. A for loop is run to get the information
+    * needed to display the photos.  There are 3 photos per pages in this case.  The url is a concatenated string that
+    * is appended to the id photo..  */
 
     this.postPhotos = function (interest, index){
         $.ajax({
@@ -103,7 +106,8 @@ var attraction = function (name, location, url, wiki) {
 var california = new state("California");
 
 //creating CA CULTURE attraction object
-
+//The attraction object contains the display title for the attraction/keyword for Flickr, longitude/latitude for
+//googlemaps and the key words for the wikipedia search
 var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/", 'Griffith_Observatory');
 var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100}, "http://www.huntington.org/", 'Huntington_Library');
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751}, "http://www.getty.edu/museum/", 'J._Paul_Getty_Museum');
