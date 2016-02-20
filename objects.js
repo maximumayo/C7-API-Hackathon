@@ -123,7 +123,7 @@ var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658},
 var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/", "Disneyland");
 var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "https://seaworldparks.com/en/seaworld-sandiego/", "SeaWorld");
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "http://www.montereybayaquarium.org/", "Monterey_Bay_Aquarium");
-var legoLand = new attraction("Legoland California", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/", "Legoland");
+var legoLand = new attraction("Legoland California", {lat: 33.1267, lng: -117.3111}, "http://www.legoland.com/california/", "Legoland");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
@@ -294,7 +294,7 @@ florida.interests.culture.top5 = wonderWork;
 //var wonderWorkWiki = new wikiDesc('WonderWorks_(museum)');
 
 //creating FL ENTERTAINMENT attraction object
-var disneyWorld = new attraction("Walt Disney World", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
+var disneyWorld = new attraction("Disney world", {lat: 28.4186, lng: -81.5811}, "https://disneyworld.disney.go.com/", 'Walt_Disney_World');
 var buschGard = new attraction("Busch Gardens Tampa", {lat: 28.0379, lng: -82.4216}, "https://seaworldparks.com/en/buschgardens-tampa/", 'Busch_Gardens_Tampa');
 var univStudio = new attraction("Universal Studios", {lat: 28.4759, lng: -81.4687}, "https://www.universalorlando.com/Theme-Parks/Universal-Studios-Florida.aspx", 'Universal_Parks_%26_Resorts');
 var disCove = new attraction("Discovery Cove", {lat: 28.4054, lng: -81.4617}, "https://discoverycove.com/", 'Discovery_Cove');
@@ -339,7 +339,7 @@ florida.interests.landmarks.top5 = plazaFerd;
 //creating FL NATURE attraction object
 var everGlade = new attraction("EverGlades", {lat: 25.3167, lng: -80.9333}, "http://www.nps.gov/ever/index.htm", 'Everglades_National_Park');
 var dryTort = new attraction("Dry Tortugas", {lat: 24.6286, lng: -82.8733}, "http://www.nps.gov/drto/index.htm", 'Dry_Tortugas_National_Park');
-var aerialAdv = new attraction("Aerial Adventure Park", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
+var aerialAdv = new attraction("Treetrek Adventures", {lat: 28.295922, lng: -81.59056}, "http://www.jiminypeak.com/Summer/Attractions/Aerial-Adventure-Park", 'Adventure_park');
 var flCavern = new attraction("Florida Caverns State Park", {lat: 30.8139, lng: -85.2331}, "https://www.floridastateparks.org/park/Florida-Caverns", 'Florida_Caverns_State_Park');
 var fallWater = new attraction("Falling Waters State Park", {lat: 30.7281, lng: -85.5286}, "https://www.floridastateparks.org/park/Falling-Waters", 'Falling_Waters_State_Park');
 
