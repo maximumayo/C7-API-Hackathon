@@ -84,7 +84,7 @@ var attraction = function (name, location, url, wiki) {
                 var text = result.parse.text["*"];
                 var blurb = $('<div></div>').html(text);
                 blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
-                $('#photoCulture1').html($(blurb).find('p:first')); //Add 1st paragraph to the html
+                $('#photoCulture1').html($(blurb).find('p:first')); //Add 1st paragraph from wiki to the html
             }
         });
     };
@@ -95,10 +95,10 @@ var california = new state("California");
 
 //creating CA CULTURE attraction object
 var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/", 'Griffith_Observatory');
-var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100});
-var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751});
-var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044});
-var artWalk = new attraction("Downtown LA art walk", {lat: 34.0570, lng: -118.2380});
+var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100}, 'Huntington_Library');
+var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751}, 'J._Paul_Getty_Museum');
+var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044}, 'California_State_Railroad_Museum');
+var artWalk = new attraction("Downtown LA art walk", {lat: 34.0570, lng: -118.2380}, 'Gallery_Row,_Los_Angeles');
 
 //adding the CA CULTURE attraction objects to the state object
 california.interests.culture.top1 = griffith;
@@ -115,11 +115,11 @@ california.interests.culture.top5 = artWalk;
 //var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
 
 //creating CA ENTERTAINMENT attraction object
-var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658});
-var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
-var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273});
-var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015});
-var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506});
+var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658}, "San_Diego_Zoo");
+var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "Disneyland");
+var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "SeaWorld");
+var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "Monterey_Bay_Aquarium");
+var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506}, "Legoland");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
@@ -136,11 +136,11 @@ california.interests.entertainment.top5 = legoLand;
 //var legoLandWiki = new wikiDesc("Legoland");
 
 //creating CA LANDMARKS attraction object
-var goldenGate = new attraction("Golden Gate Bridge", {lat: 37.8197, lng: -122.4786});
-var hollywood = new attraction("Hollywood", {lat: 34.1000, lng: -118.3333});
-var alcatraz = new attraction("Alcatraz", {lat: 37.8267, lng: -122.4233});
-var santaPier = new attraction("Santa Monica Pier", {lat:34.0086, lng: -118.4986});
-var ussMidway = new attraction("USS Midway Museum", {lat:32.7113762, lng: -117.175658});
+var goldenGate = new attraction("Golden Gate Bridge", {lat: 37.8197, lng: -122.4786}, "Golden_Gate_Bridge");
+var hollywood = new attraction("Hollywood", {lat: 34.1000, lng: -118.3333}, "Hollywood");
+var alcatraz = new attraction("Alcatraz", {lat: 37.8267, lng: -122.4233}, "Alcatraz_Island");
+var santaPier = new attraction("Santa Monica Pier", {lat:34.0086, lng: -118.4986}, "Santa_Monica_Pier");
+var ussMidway = new attraction("USS Midway Museum", {lat:32.7113762, lng: -117.175658}, "USS_Midway_Museum");
 
 //adding the CA LANDMARKS attraction objects to the state object
 california.interests.landmarks.top1 = goldenGate;
@@ -157,11 +157,11 @@ california.interests.landmarks.top5 = ussMidway;
 //var ussMidwayWiki = new wikiDesc("USS_Midway_Museum");
 
 //creating CA NATURE attraction object
-var yosemite = new attraction("Yosemite National Park", {lat: 37.8499, lng: -119.5677});
-var joshuaTree = new attraction("Joshua Tree National Park", {lat: 33.7884, lng: -115.8982});
-var redWood = new attraction("Redwood National Park", {lat: 41.213181, lng: -124.004631});
-var sequoiaKings = new attraction("Sequoia and Kings Canyon National Parks", {lat: 36.5647, lng: -118.7734});
-var lakeTahoe = new attraction("Lake Tahoe", {lat: 39.0917, lng: -120.0417});
+var yosemite = new attraction("Yosemite National Park", {lat: 37.8499, lng: -119.5677}, "Yosemite_National_Park");
+var joshuaTree = new attraction("Joshua Tree National Park", {lat: 33.7884, lng: -115.8982}, "Joshua_Tree_National_Park");
+var redWood = new attraction("Redwood National Park", {lat: 41.213181, lng: -124.004631}, "Redwood_National_and_State_Parks");
+var sequoiaKings = new attraction("Sequoia and Kings Canyon National Parks", {lat: 36.5647, lng: -118.7734}, "Sequoia_and_Kings_Canyon_National_Parks");
+var lakeTahoe = new attraction("Lake Tahoe", {lat: 39.0917, lng: -120.0417}, "Lake_Tahoe");
 
 //adding the CA NATURE attraction objects to the state object
 california.interests.nature.top1 = yosemite;
@@ -181,11 +181,11 @@ california.interests.nature.top5 = lakeTahoe;
 var newYork = new state("New York");
 
 //creating NY CULTURE attraction object
-var metroArt = new attraction("The Metropolitan Museum of Art", {lat: 40.7789, lng: -73.9637});
-var septElev = new attraction("The National 9/11 Memorial & Museum", {lat: 40.7111, lng: -74.0146});
-var ellis = new attraction("Ellis Island", {lat: 40.6986, lng: -74.0400});
-var publicLib = new attraction("New York Public Library", {lat: 40.7527, lng: -73.9818});
-var guggen = new attraction("Guggenheim", {lat: 40.782879, lng: -73.959027});
+var metroArt = new attraction("The Metropolitan Museum of Art", {lat: 40.7789, lng: -73.9637}, "Metropolitan_Museum_of_Art");
+var septElev = new attraction("The National 9/11 Memorial & Museum", {lat: 40.7111, lng: -74.0146}, "National_September_11_Memorial_%26_Museum");
+var ellis = new attraction("Ellis Island", {lat: 40.6986, lng: -74.0400}, "Ellis_Island");
+var publicLib = new attraction("New York Public Library", {lat: 40.7527, lng: -73.9818}, "New_York_Public_Library");
+var guggen = new attraction("Guggenheim", {lat: 40.782879, lng: -73.959027}, "Solomon_R._Guggenheim_Museum");
 
 //adding the NY CULTURE attraction objects to the state object
 newYork.interests.culture.top1 = metroArt;
@@ -202,11 +202,11 @@ newYork.interests.culture.top5 = guggen;
 //var guggenWiki = new wikiDesc("Solomon_R._Guggenheim_Museum");
 
 //creating NY ENTERTAINMENT attraction object
-var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835});
-var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790});
-var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936});
-var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754});
-var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859});
+var broadWay = new attraction("Broadway", {lat: 40.7635, lng: -73.9835}, "Broadway_theatre");
+var tonightShow = new attraction("The Tonight Show", {lat: 40.7590, lng: -73.9790}, "The_Tonight_Show");
+var madGarden = new attraction("Madison Square Garden", {lat: 40.7506, lng: -73.9936}, "Madison_Square_Garden");
+var bronxZoo = new attraction("Bronx Zoo", {lat: 40.8506, lng: -73.8754}, "Bronx_Zoo");
+var coneyIsl = new attraction("Coney Island", {lat: 40.5749, lng: -73.9859}, "Coney_Island");
 
 //adding the NY ENTERTAINMENT attraction objects to the state object
 newYork.interests.entertainment.top1 = broadWay;
@@ -223,11 +223,11 @@ newYork.interests.entertainment.top5 = coneyIsl;
 //var coneyIslWiki = new wikiDesc("Coney_Island");
 
 //creating NY LANDMARKS attraction object
-var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444});
-var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857});
-var rockCenter = new attraction("Rockefeller Center", {lat:40.7586, lng: -73.9792});
-var timeSquare = new attraction("Times Square", {lat: 40.7577, lng: -73.9857});
-var brookBridge = new attraction("Brooklyn Bridge", {lat:40.7057, lng: -73.9964});
+var liberty = new attraction("Statue of Liberty", {lat: 40.6892, lng: -74.0444}, "Statue_of_Liberty");
+var empState = new attraction("Empire State Building", {lat: 40.7484, lng: -73.9857}, "Empire_State_Building");
+var rockCenter = new attraction("Rockefeller Center", {lat:40.7586, lng: -73.9792}, "Rockefeller_Center");
+var timeSquare = new attraction("Times Square", {lat: 40.7577, lng: -73.9857}, "Times_Square");
+var brookBridge = new attraction("Brooklyn Bridge", {lat:40.7057, lng: -73.9964}, "Brooklyn_Bridge");
 
 //adding the NY LANDMARKS attraction objects to the state object
 newYork.interests.landmarks.top1 = liberty;
@@ -244,11 +244,11 @@ newYork.interests.landmarks.top5 = brookBridge;
 //var brookBridgeWiki = new wikiDesc("Brooklyn_Bridge");
 
 //creating NY NATURE attraction object
-var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667});
-var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167});
-var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000});
-var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833});
-var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361});
+var centPark = new attraction("Central Park", {lat: 40.7833, lng: -73.9667}, "Central_Park");
+var niagara = new attraction("Niagara Falls", {lat: 43.1000, lng: -79.0167}, "Niagara_Falls");
+var lakeErie = new attraction("Lake Erie", {lat: 42.2000, lng: -81.2000}, "Lake_Erie");
+var letchPark = new attraction("Letchworth State Park", {lat: 42.6347, lng: -77.9833}, "Letchworth_State_Park");
+var jonesBeach = new attraction("Jones Beach State Park", {lat: 40.6142, lng: -73.5361}, "Jones_Beach_State_Park");
 
 //adding the NY NATURE attraction objects to the state object
 newYork.interests.nature.top1 = centPark;
@@ -268,11 +268,11 @@ newYork.interests.nature.top5 = jonesBeach;
 var florida = new state("Florida");
 
 //creating FL CULTURE attraction object
-var castilloMarc = new attraction("Castillo de San Marcos", {lat: 29.8978, lng: -81.3114});
-var dali = new attraction("Salvador Dali Museum", {lat: 27.7605833, lng: -82.6362096});
-var navalMuse = new attraction("National Naval Aviation Museum", {lat: 30.3496, lng: -87.3036});
-var spaceCent = new attraction("Kennedy Space Center", {lat: 28.5241, lng: -80.6508});
-var wonderWork = new attraction("Wonderworks", {lat: 28.4337, lng: -81.4717});
+var castilloMarc = new attraction("Castillo de San Marcos", {lat: 29.8978, lng: -81.3114}, 'Castillo_de_San_Marcos');
+var dali = new attraction("Salvador Dali Museum", {lat: 27.7605833, lng: -82.6362096}, 'Salvador_Dalí_Museum');
+var navalMuse = new attraction("National Naval Aviation Museum", {lat: 30.3496, lng: -87.3036}, 'National_Naval_Aviation_Museum');
+var spaceCent = new attraction("Kennedy Space Center", {lat: 28.5241, lng: -80.6508}, 'Kennedy_Space_Center');
+var wonderWork = new attraction("Wonderworks", {lat: 28.4337, lng: -81.4717}, 'WonderWorks_(museum)');
 
 //adding the FL CULTURE attraction objects to the state object
 florida.interests.culture.top1 = castilloMarc;
