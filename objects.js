@@ -48,13 +48,13 @@ var attraction = function (name, location, url, wiki) {
     //this will be the function that adds photos to a page
 
     this.postPhotos = function (interest, index){
-        $("#photo"  + interest + index).html(""); //clears the photo divs
         $.ajax({
             datatype: 'json',
             method: "get",
             url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=3&sort=relevance&text='+ this.name,
             success: function (result) {
                 console.log('ajax was a success' + result);
+                $("#photo"  + interest + index).html(""); //clears the photo divs
 
                 global_result = result;
                 for (var i = 0; i < global_result.photos.photo.length; i++) {
@@ -74,7 +74,7 @@ var attraction = function (name, location, url, wiki) {
 
     //this will be the function to add description to the page
 
-    this.postDescription = function () {
+    this.postDescription = function (interest, index) {
         $.ajax({
             type: "GET",
             url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + this.wiki + "&callback=?",
@@ -84,7 +84,7 @@ var attraction = function (name, location, url, wiki) {
                 var text = result.parse.text["*"];
                 var blurb = $('<div></div>').html(text);
                 blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
-                $('#photoCulture1').html($(blurb).find('p:first')); //Add 1st paragraph to the html
+                $('#desc' + interest + index).html($(blurb).find('p:first')); //Add 1st paragraph to the html
             }
         });
     };
