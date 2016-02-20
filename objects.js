@@ -86,6 +86,8 @@ var attraction = function (name, location, url, wiki) {
                 var blurb = $('<div></div>').html(text);
                 blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
                 $('#desc' + interest + index).html($(blurb).find('p:first')); //Add 1st paragraph to the html
+                $('#desc' + interest + index).append($(blurb).find('p:nth-child(2)')); //Add 2nd paragraph to the html
+
 
             }
         });
