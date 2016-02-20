@@ -102,15 +102,15 @@ var california = new state("California");
 var griffith = new attraction("Griffith Observatory", {lat: 34.1186, lng: -118.3004}, "http://griffithobservatory.org/", 'Griffith_Observatory');
 var huntGarden = new attraction("Huntington Library & Garden", {lat: 34.1272, lng: -118.1100});
 var getty = new attraction("The Getty Center", {lat: 34.079, lng: -118.4751});
-var railroad = new attraction("California State Railroad Museum", {lat: 38.5847, lng: -121.5044});
-var artWalk = new attraction("Downtown LA art walk", {lat: 34.0570, lng: -118.2380});
+var railroad = new attraction("California Railroad State Museum", {lat: 38.5847, lng: -121.5044});
+var artWalk = new attraction("Downtown Los Angeles art walk", {lat: 34.0570, lng: -118.2380});
 
-//creating CA Culture Wiki Search Terms
-var griffithwiki = new wikiDesc('Griffith_Observatory');
-var huntwiki = new wikiDesc('Huntington_Library');
-var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
-var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
-var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
+////creating CA Culture Wiki Search Terms
+//var griffithwiki = new wikiDesc('Griffith_Observatory');
+//var huntwiki = new wikiDesc('Huntington_Library');
+//var gettywiki = new wikiDesc('J._Paul_Getty_Museum');
+//var railroadwiki = new wikiDesc('California_State_Railroad_Museum');
+//var artwalkwiki = new wikiDesc('Gallery_Row,_Los_Angeles');
 
 //adding the CA CULTURE attraction objects to the state object
 california.interests.culture.top1 = griffith;
@@ -128,10 +128,10 @@ california.interests.culture.top5 = artWalk;
 
 //creating CA ENTERTAINMENT attraction object
 var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658});
-var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190});
-var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273});
+var disney = new attraction("Disneyland", {lat: 33.8090, lng: -117.9190});
+var seaWorld = new attraction("SeaWorld", {lat: 32.7658, lng: -117.2273});
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015});
-var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506});
+var legoLand = new attraction("Legoland", {lat: 33.1581, lng: -117.3506});
 
 
 
