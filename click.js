@@ -42,8 +42,9 @@ $(document).ready(function () {
                 stateObj = florida;
                 break;
         }
-
-        showInterestContent(stateObj);
+        $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
+            showInterestContent(stateObj);
+        });
 
         $('#interestModal').modal('show'); //shows modal
 
@@ -63,10 +64,11 @@ function showInterestContent(state) {
 
             state.interests[interest]['top'+i].postName(interestName, i);
 
-            $('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
-                state.interests[interest]['top'+i].postMap();
+            //$('#interestModal').on('shown.bs.modal', function () { //Wait event for modal to show before adding google maps
 
-            });
+                state.interests[interest]['top'+i].postMap(interestName, i);
+
+            //});
             state.interests[interest]['top'+i].postPhotos(interestName, i);
 
 

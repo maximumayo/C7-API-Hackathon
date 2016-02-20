@@ -30,12 +30,12 @@ var attraction = function (name, location, url, wiki) {
     };
 
     //this will be the function that adds maps to a page
-    this.postMap = function () {
-        var map = new google.maps.Map(document.getElementById('map'), {
+    this.postMap = function (interest, index) {
+        var map = new google.maps.Map(document.getElementById('map'  + interest + index), {
             center: this.location,
             zoom: 14
         });
-        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'), {
+        var panorama = new google.maps.StreetViewPanorama(document.getElementById('pano'  + interest + index), {
                 position: this.location,
                 pov: {
                     heading: 34,
