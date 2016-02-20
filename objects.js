@@ -48,13 +48,13 @@ var attraction = function (name, location, url, wiki) {
     //this will be the function that adds photos to a page
 
     this.postPhotos = function (interest, index){
-        $("#photo"  + interest + index).html(""); //clears the photo divs
         $.ajax({
             datatype: 'json',
             method: "get",
             url: 'https://api.flickr.com/services/rest?method=flickr.photos.search&api_key=6cf32b7431855ee07e7a0749b21399b2&format=json&nojsoncallback=1&per_page=3&sort=relevance&text='+ this.name,
             success: function (result) {
                 console.log('ajax was a success' + result);
+                $("#photo"  + interest + index).html(""); //clears the photo divs
 
                 global_result = result;
                 for (var i = 0; i < global_result.photos.photo.length; i++) {
@@ -74,17 +74,19 @@ var attraction = function (name, location, url, wiki) {
 
     //this will be the function to add description to the page
 
-    this.postDescription = function () {
+    this.postDescription = function (interest, index) {
         $.ajax({
             type: "GET",
             url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&section=0&page=" + this.wiki + "&callback=?",
             dataType: "json",
             success: function (result) {
                 console.log('ajax was a success' + result);
+                $('#desc' + interest + index).html("");//clears the photo divs
                 var text = result.parse.text["*"];
                 var blurb = $('<div></div>').html(text);
                 blurb.find('a').each(function() { $(this).replaceWith($(this).html()); }); // remove links as they will not work
-                $('#photoCulture1').html($(blurb).find('p:first')); //Add 1st paragraph from wiki to the html
+                $('#desc' + interest + index).html($(blurb).find('p:first')); //Add 1st paragraph to the html
+
             }
         });
     };
@@ -119,7 +121,7 @@ var diegoZoo = new attraction("San Diego Zoo", {lat: 32.7357, lng: -117.175658},
 var disney = new attraction("Disneyland/California Adventure", {lat: 33.8090, lng: -117.9190}, "https://disneyland.disney.go.com/", "Disneyland");
 var seaWorld = new attraction("Sea World", {lat: 32.7658, lng: -117.2273}, "https://seaworldparks.com/en/seaworld-sandiego/", "SeaWorld");
 var bayAqua = new attraction("Monterey Bay Aquarium", {lat: 36.6183, lng: -121.9015}, "http://www.montereybayaquarium.org/", "Monterey_Bay_Aquarium");
-var legoLand = new attraction("Lego Land", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/", "Legoland");
+var legoLand = new attraction("Legoland California", {lat: 33.1581, lng: -117.3506}, "http://www.legoland.com/california/", "Legoland");
 
 //adding the CA ENTERTAINMENT attraction objects to the state object
 california.interests.entertainment.top1 = diegoZoo;
