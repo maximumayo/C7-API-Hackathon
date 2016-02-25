@@ -18,12 +18,12 @@ Hackathon project involving the combination of different data sources into an ap
 - 5:30PM Friday, February 19th 2016
 
 ###Team Swimmingly Red Birdie
-Paul
-Deanna
-Srayuth
-Jaison
-Max
-Trisha
+- Paul
+- Deanna
+- Srayuth
+- Jaison
+- Max
+- Trisha
 
 ###Description
 Destination to Fun is an app that provides lists of the top attractions in
