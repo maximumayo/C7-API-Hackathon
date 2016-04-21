@@ -33,7 +33,7 @@ from wikipedia, and the google maps coordinates are displayed. A link to
 the attraction's website is also provided in the title of the attraction.
 This is a great way to find ideas for your next vacation in the US!
 
-![screenshot of app](/images/funscreen.png?raw=true "screenshot of app")
+![screenshot of app](/images/dtfscreen.png?raw=true "screenshot of app")
 ![screenshot of app](/images/modalreadme.png?raw=true "screenshot of app")
 
 
