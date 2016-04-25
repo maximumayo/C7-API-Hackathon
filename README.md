@@ -14,10 +14,6 @@ Hackathon project involving the combination of different data sources into an ap
 - **Innovative / Transformative** : Did the project do something new and exciting?  Was it bold and tried to do things that haven't been done much.  Did it combine the data sources together in a way that was more useful than either source by itself
 - **Ease of Use / Understanding** : Was it easy to use the application / game, or if it was more complex, was the application or game able to provide you with tutorials or instructions that made understanding it a breeze.
 
-
-### Deadline: 
-- 5:30PM Friday, February 19th 2016
-
 ###Team Swimmingly Red Birdie
 - Paul
 - Deanna
