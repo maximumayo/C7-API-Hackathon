@@ -1,7 +1,7 @@
 # C7_Hackathon
 Hackathon project involving the combination of different data sources into an application or game
 
-- Live Demo http://www.maximilianmayo.com/destination-to-fun/
+- Live Demo http://maximumayo.github.io/destination-to-fun/
 
 ### Requirements
 - Combine at least 2 **external** resources via AJAX requests and present their information in an application
